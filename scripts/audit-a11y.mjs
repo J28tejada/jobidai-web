@@ -21,6 +21,8 @@ const axeSource = readFileSync(require.resolve("axe-core/axe.min.js"), "utf8");
 
 const BASE = process.env.AUDIT_URL ?? "http://127.0.0.1:3000";
 const LOCALES = ["es", "en"];
+/** Rutas auditadas, relativas al prefijo de idioma. */
+const RUTAS = ["", "/laboratorio/motor-de-presupuestos"];
 
 // En local basta con `npx playwright install`. En entornos con un Chromium ya
 // provisto (contenedores de CI), apunta CHROMIUM_PATH a ese binario en lugar
@@ -30,13 +32,14 @@ const browser = await chromium.launch(
 );
 let totalViolations = 0;
 
-for (const locale of LOCALES) {
+for (const locale of LOCALES)
+  for (const ruta of RUTAS) {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 900 },
     reducedMotion: "reduce",
   });
   const page = await context.newPage();
-  await page.goto(`${BASE}/${locale}`, { waitUntil: "networkidle" });
+  await page.goto(`${BASE}/${locale}${ruta}`, { waitUntil: "networkidle" });
   await page.waitForTimeout(2000);
 
   // Abre el acordeón para auditar también las respuestas plegadas
@@ -45,6 +48,18 @@ for (const locale of LOCALES) {
       d.open = true;
     });
   });
+
+  // En el laboratorio, ejecuta un caso para auditar también el resultado
+  const ejemplo = page.getByRole("button", { name: /Caso normal|Normal case/ });
+  if (await ejemplo.count()) {
+    await ejemplo.first().click();
+    await page.waitForTimeout(1500);
+    const detalle = page.getByRole("button", { name: /Ver detalle|Show detail/ });
+    if (await detalle.count()) {
+      await detalle.first().click();
+      await page.waitForTimeout(600);
+    }
+  }
 
   await page.addScriptTag({ content: axeSource });
   const results = await page.evaluate(
@@ -57,7 +72,7 @@ for (const locale of LOCALES) {
       }),
   );
 
-  console.log(`\n===== /${locale} =====`);
+  console.log(`\n===== /${locale}${ruta} =====`);
   console.log(
     `reglas aprobadas: ${results.passes.length}   incumplimientos: ${results.violations.length}`,
   );

@@ -1,4 +1,6 @@
 import { Section } from "@/components/ui/Section";
+import { ArrowRight } from "lucide-react";
+import { ButtonLink } from "@/components/ui/Button";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Reveal } from "@/components/ui/Reveal";
@@ -54,6 +56,25 @@ export function Work({
                         </div>
                       ))}
                     </dl>
+
+                    {item.href ? (
+                      <ButtonLink
+                        href={`/${locale}${item.href}`}
+                        variant="secondary"
+                        size="sm"
+                        className="mt-6 w-fit"
+                      >
+                        {work.cta}
+                        <ArrowRight
+                          className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
+                          aria-hidden
+                        />
+                      </ButtonLink>
+                    ) : (
+                      <span className="mt-6 w-fit rounded-full border border-hairline px-3.5 py-1.5 font-mono text-2xs tracking-widest text-faint uppercase">
+                        {work.ctaSinDemo}
+                      </span>
+                    )}
 
                     <ul className="mt-6 flex flex-wrap gap-2">
                       {item.tags.map((tag) => (

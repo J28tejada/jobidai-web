@@ -56,8 +56,11 @@ export type Dictionary = {
       solution: string;
       metrics: { value: string; label: string }[];
       tags: string[];
+      /** Ruta de la demo navegable, si existe. Sin ella la tarjeta no enlaza. */
+      href?: string;
     }[];
     cta: string;
+    ctaSinDemo: string;
   };
   stack: {
     eyebrow: string;
@@ -122,6 +125,62 @@ export type Dictionary = {
     };
     direct: { label: string; value: string; href: string }[];
   };
+  laboratorio: {
+    motorPresupuestos: {
+      meta: { title: string; description: string };
+      eyebrow: string;
+      titulo: string;
+      lede: string;
+      volver: string;
+      entrada: {
+        titulo: string;
+        etiqueta: string;
+        placeholder: string;
+        ejecutar: string;
+        ejecutando: string;
+        limpiar: string;
+        ejemplos: string;
+        contador: string;
+      };
+      ejemplos: { id: string; etiqueta: string; nota: string; texto: string }[];
+      etapas: { entrada: string; extraccion: string; validacion: string; decision: string };
+      resultado: {
+        presupuestoTitulo: string;
+        escaladoTitulo: string;
+        escaladoLede: string;
+        necesita: string;
+        avisos: string;
+        concepto: string;
+        medicion: string;
+        precio: string;
+        importe: string;
+        subtotal: string;
+        residuos: string;
+        base: string;
+        iva: string;
+        total: string;
+        orientativo: string;
+        validez: string;
+        descargar: string;
+        descargando: string;
+        crmTitulo: string;
+        crmNota: string;
+        vacio: string;
+        error: string;
+      };
+      traza: { titulo: string; nota: string; ver: string; ocultar: string };
+      comoFunciona: { titulo: string; items: { titulo: string; texto: string }[] };
+      honestidad: { titulo: string; realTitulo: string; real: string[]; simuladoTitulo: string; simulado: string[] };
+      evaluacion: {
+        titulo: string;
+        lede: string;
+        filas: { etiqueta: string; valor: string; nota: string }[];
+        limitacionesTitulo: string;
+        limitaciones: string[];
+      };
+    };
+  };
+
   footer: {
     tagline: string;
     sections: { title: string; links: { href: string; label: string }[] }[];

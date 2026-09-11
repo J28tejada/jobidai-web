@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   JOBID — DESIGN SYSTEM
+   Dirección de arte: "Ingeniería cálida".
+   Base casi negra con temperatura cálida, acento ámbar incandescente y
+   tipografía editorial. Toda la identidad vive en estos tokens: cambiar
+   --color-ember-* y --color-ink-* reescribe el sitio entero.
+   ========================================================================== */
+
+@theme {
+  /* --- Neutros: escala "ink", negro con temperatura cálida --------------- */
+  --color-ink-50: #f7f6f4;
+  --color-ink-100: #ebe9e5;
+  --color-ink-200: #d4d1ca;
+  --color-ink-300: #a8a49b;
+  --color-ink-400: #78746c;
+  --color-ink-500: #514e48;
+  --color-ink-600: #363430;
+  --color-ink-700: #232220;
+  --color-ink-800: #171614;
+  --color-ink-900: #0f0e0d;
+  --color-ink-950: #080807;
+
+  /* --- Acento: ámbar incandescente --------------------------------------- */
+  --color-ember-50: #fff4ed;
+  --color-ember-100: #ffe6d5;
+  --color-ember-200: #ffc9aa;
+  --color-ember-300: #ffa374;
+  --color-ember-400: #ff7238;
+  --color-ember-500: #ff5a1f;
+  --color-ember-600: #f03d06;
+  --color-ember-700: #c72c07;
+  --color-ember-800: #9e250e;
+  --color-ember-900: #7f220f;
+
+  /* --- Soporte: cian frío para contraste térmico -------------------------- */
+  --color-signal-300: #7dd3fc;
+  --color-signal-400: #38bdf8;
+  --color-signal-500: #0ea5e9;
+
+  /* --- Semánticos --------------------------------------------------------- */
+  --color-canvas: var(--color-ink-950);
+  --color-surface: var(--color-ink-900);
+  --color-raised: var(--color-ink-800);
+  --color-hairline: color-mix(in oklab, var(--color-ink-100) 10%, transparent);
+  --color-hairline-strong: color-mix(in oklab, var(--color-ink-100) 18%, transparent);
+  /* Jerarquía de texto en tres pasos. Los tres valores superan 4.5:1 sobre
+     todos los fondos del sitio (canvas #080807, sección tintada #131210 y
+     tarjeta #171614), verificado con axe-core. No los oscurezcas sin volver
+     a medir: el gris anterior (#6b675f) se quedaba en 3.3:1 e incumplía AA. */
+  --color-text: #fbfaf9;
+  --color-muted: #b0aba3;
+  --color-faint: #8f8a80;
+
+  /* --- Tipografía ---------------------------------------------------------- */
+  --font-display: var(--font-bricolage), "Georgia", serif;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", monospace;
+
+  /* Escala fluida: cada paso interpola entre 360px y 1440px de viewport */
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1.45;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.6;
+  --text-base: 1rem;
+  --text-base--line-height: 1.7;
+  --text-lg: clamp(1.0625rem, 0.98rem + 0.35vw, 1.1875rem);
+  --text-lg--line-height: 1.65;
+  --text-xl: clamp(1.25rem, 1.14rem + 0.5vw, 1.5rem);
+  --text-xl--line-height: 1.45;
+  --text-2xl: clamp(1.375rem, 1.25rem + 0.55vw, 1.75rem);
+  --text-2xl--line-height: 1.3;
+  --text-3xl: clamp(1.625rem, 1.45rem + 0.8vw, 2.25rem);
+  --text-3xl--line-height: 1.2;
+  --text-4xl: clamp(2rem, 1.55rem + 2vw, 3rem);
+  --text-4xl--line-height: 1.1;
+  --text-5xl: clamp(2.5rem, 1.9rem + 2.7vw, 4rem);
+  --text-5xl--line-height: 1.05;
+  --text-6xl: clamp(2.75rem, 1.55rem + 5.35vw, 5rem);
+  --text-6xl--line-height: 0.98;
+
+  /* --- Radios -------------------------------------------------------------- */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  /* --- Curvas de movimiento ------------------------------------------------ */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- Animaciones --------------------------------------------------------- */
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-drift: drift 18s var(--ease-in-out-quart) infinite;
+  --animate-pulse-ring: pulse-ring 2.8s var(--ease-out-quint) infinite;
+  --animate-flow: flow 3s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(2%, -3%, 0) scale(1.08); }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(0.85); opacity: 0.7; }
+  70% { transform: scale(1.6); opacity: 0; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@keyframes flow {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* ============================================================================
+   BASE
+   ========================================================================== */
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    /* Altura real de la barra de navegación, usada por scroll-margin */
+    --header-h: 4.5rem;
+  }
+
+  * {
+    border-color: var(--color-hairline);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  /* Los anclajes no quedan escondidos bajo la barra fija */
+  :target,
+  [id] {
+    scroll-margin-top: calc(var(--header-h) + 1.5rem);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Foco visible coherente en todo el sitio */
+  :focus-visible {
+    outline: 2px solid var(--color-ember-400);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  ::selection {
+    background-color: var(--color-ember-500);
+    color: var(--color-ink-950);
+  }
+
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--color-ink-950); }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-ink-700);
+    border-radius: 99px;
+    border: 2px solid var(--color-ink-950);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-ink-600); }
+
+  /* Respeto total a quien pide menos movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ============================================================================
+   UTILIDADES DE COMPOSICIÓN
+   ========================================================================== */
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+  @media (width >= 40rem) { padding-inline: 2rem; }
+  @media (width >= 80rem) { padding-inline: 2.5rem; }
+}
+
+/* Texto con degradado ámbar, para palabras clave dentro de un titular */
+@utility text-ember-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-ember-300) 0%,
+    var(--color-ember-500) 45%,
+    var(--color-ember-700) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* Superficie de tarjeta: fondo elevado + borde capilar + brillo superior */
+@utility surface-card {
+  position: relative;
+  background-color: color-mix(in oklab, var(--color-ink-800) 70%, transparent);
+  border: 1px solid var(--color-hairline);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(12px);
+}
+
+/* Línea de luz en el borde superior, el detalle que hace que se vea "caro" */
+@utility edge-light {
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 1.5rem;
+    top: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in oklab, var(--color-ink-50) 35%, transparent),
+      transparent
+    );
+    pointer-events: none;
+  }
+}
+
+/* Retícula técnica de fondo, evoca blueprint y sistemas conectados */
+@utility grid-blueprint {
+  background-image:
+    linear-gradient(to right, var(--color-hairline) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-hairline) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
+
+/* Grano sutil que rompe el banding de los degradados */
+@utility grain {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* Desvanecido de máscara para marquesinas y bordes de sección */
+@utility mask-fade-x {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+/* Etiqueta monoespaciada de sección (kicker) */
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ember-400);
+}
+
+/* ============================================================================
+   ACORDEÓN NATIVO
+   <details> animado con ::details-content. Donde el navegador todavía no lo
+   soporta, el panel simplemente abre y cierra al instante: el contenido
+   siempre es accesible.
+   ========================================================================== */
+
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  .faq-item::details-content {
+    block-size: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      block-size 0.42s var(--ease-out-expo),
+      content-visibility 0.42s allow-discrete,
+      opacity 0.32s ease;
+  }
+
+  .faq-item[open]::details-content {
+    block-size: auto;
+    opacity: 1;
+  }
+}
+
+/* Oculta el marcador por defecto en todos los navegadores. display:block
+   quita el display:list-item del summary, que es lo que reservaba el hueco
+   del triángulo y dejaba una marca residual bajo el texto. */
+.faq-item > summary {
+  display: block;
+}
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item > summary::marker {
+  content: "";
+}

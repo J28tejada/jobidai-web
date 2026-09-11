@@ -322,12 +322,11 @@
   }
 }
 
-/* Oculta el marcador por defecto en todos los navegadores. display:block
-   quita el display:list-item del summary, que es lo que reservaba el hueco
-   del triángulo y dejaba una marca residual bajo el texto. */
-.faq-item > summary {
-  display: block;
-}
+/* Oculta el marcador por defecto en todos los navegadores.
+   No fijes aquí ninguna propiedad `display`: el summary lleva la utilidad
+   `flex` de Tailwind y este selector tiene más especificidad, así que la
+   sobrescribiría y tiraría el icono a una fila propia. El `display: flex`
+   de la utilidad ya elimina el `display: list-item` y con él el marcador. */
 .faq-item > summary::-webkit-details-marker {
   display: none;
 }

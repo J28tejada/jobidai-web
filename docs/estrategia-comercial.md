@@ -430,6 +430,9 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 
 - [ ] Validar los precios con dos o tres clientes reales antes de publicarlos.
 - [ ] Confirmar el calendario e-CF de la DGII antes de usarlo en publicidad.
+- [ ] Leer `docs/facturacion-electronica-rd.md`: los requisitos reales de la
+      DGII obligan a exponer tres servicios web por cliente, lo que implica un
+      costo recurrente que hoy la web no contempla.
 - [ ] Definir si se atiende EEUU con precios distintos y cómo se comunica.
 - [ ] Decidir si se abre una línea específica de facturación electrónica en RD
       antes de noviembre 2026: es la oportunidad con fecha más cercana.

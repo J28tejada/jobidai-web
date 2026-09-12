@@ -62,14 +62,14 @@ export function SystemDiagram({ locale }: { locale: "es" | "en" }) {
         <div className="flex gap-1.5" aria-hidden>
           <span className="h-2.5 w-2.5 rounded-full bg-ink-600" />
           <span className="h-2.5 w-2.5 rounded-full bg-ink-600" />
-          <span className="h-2.5 w-2.5 rounded-full bg-ember-500/70" />
+          <span className="h-2.5 w-2.5 rounded-full bg-azure-500/70" />
         </div>
         <span className="font-mono text-2xs tracking-widest text-faint uppercase">
           {locale === "es" ? "flujo · activo" : "flow · live"}
         </span>
         <span className="relative ml-auto flex h-2 w-2" aria-hidden>
-          <span className="absolute inline-flex h-full w-full rounded-full bg-ember-500 opacity-70 motion-safe:animate-pulse-ring" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-ember-400" />
+          <span className="absolute inline-flex h-full w-full rounded-full bg-azure-500 opacity-70 motion-safe:animate-pulse-ring" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-azure-400" />
         </span>
       </div>
 
@@ -86,9 +86,9 @@ export function SystemDiagram({ locale }: { locale: "es" | "en" }) {
       >
         <defs>
           <linearGradient id="edge-grad" x1="0" x2="1" y1="0" y2="0">
-            <stop offset="0%" stopColor="var(--color-ember-600)" stopOpacity="0.15" />
-            <stop offset="50%" stopColor="var(--color-ember-400)" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="var(--color-ember-600)" stopOpacity="0.15" />
+            <stop offset="0%" stopColor="var(--color-azure-600)" stopOpacity="0.15" />
+            <stop offset="50%" stopColor="var(--color-azure-400)" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="var(--color-azure-600)" stopOpacity="0.15" />
           </linearGradient>
         </defs>
 
@@ -134,10 +134,10 @@ export function SystemDiagram({ locale }: { locale: "es" | "en" }) {
               width={node.w}
               height={48}
               rx={10}
-              fill={node.accent ? "var(--color-ember-500)" : "var(--color-ink-800)"}
+              fill={node.accent ? "var(--color-azure-500)" : "var(--color-ink-800)"}
               fillOpacity={node.accent ? 0.12 : 0.9}
               stroke={
-                node.accent ? "var(--color-ember-500)" : "var(--color-hairline-strong)"
+                node.accent ? "var(--color-azure-500)" : "var(--color-hairline-strong)"
               }
               strokeWidth="1"
             />
@@ -169,7 +169,7 @@ export function SystemDiagram({ locale }: { locale: "es" | "en" }) {
         <div className="flex items-center gap-3">
           <span
             aria-hidden
-            className="h-1.5 w-1.5 shrink-0 rounded-full bg-ember-400"
+            className="h-1.5 w-1.5 shrink-0 rounded-full bg-azure-400"
           />
           <motion.p
             key={step}
@@ -191,7 +191,7 @@ export function SystemDiagram({ locale }: { locale: "es" | "en" }) {
             <span
               key={entry.en}
               className={`h-0.5 flex-1 rounded-full transition-colors duration-500 ${
-                index <= step ? "bg-ember-500" : "bg-ink-700"
+                index <= step ? "bg-azure-500" : "bg-ink-700"
               }`}
             />
           ))}

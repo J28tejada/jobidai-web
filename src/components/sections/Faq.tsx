@@ -24,12 +24,12 @@ export function Faq({ faq }: { faq: Dictionary["faq"] }) {
               <Reveal key={item.question} delay={index * 0.04} amount={0.3}>
                 <details className="faq-item group border-b border-hairline">
                   <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-6 text-left">
-                    <h3 className="text-lg leading-snug font-medium text-ink-50 transition-colors duration-200 group-hover:text-ember-300">
+                    <h3 className="text-lg leading-snug font-medium text-ink-50 transition-colors duration-200 group-hover:text-azure-300">
                       {item.question}
                     </h3>
                     <span
                       aria-hidden
-                      className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full border border-hairline text-faint transition-all duration-300 group-hover:border-ember-500/40 group-hover:text-ember-400 group-open:rotate-45 group-open:border-ember-500/40 group-open:text-ember-400"
+                      className="mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-full border border-hairline text-faint transition-all duration-300 group-hover:border-azure-500/40 group-hover:text-azure-400 group-open:rotate-45 group-open:border-azure-500/40 group-open:text-azure-400"
                     >
                       <Plus className="size-4" />
                     </span>

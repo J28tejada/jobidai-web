@@ -29,7 +29,7 @@ export function SectionHeading({
         <span className="eyebrow inline-flex items-center gap-2.5">
           <span
             aria-hidden
-            className="inline-block h-1.5 w-1.5 rounded-full bg-ember-500"
+            className="inline-block h-1.5 w-1.5 rounded-full bg-azure-500"
           />
           {eyebrow}
         </span>

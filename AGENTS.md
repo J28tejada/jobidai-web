@@ -18,10 +18,21 @@ Nunca escribas texto de interfaz dentro de un componente. Todo va a
 `src/lib/i18n/types.ts` fuerza que ambos idiomas coincidan: si añades una clave
 a uno y no al otro, el build falla. Eso es intencional.
 
+## Tono y mercado
+El público es micro y pequeño negocio de América Latina y negocios latinos en
+Estados Unidos. El español es **latinoamericano**, nunca de España: "computadora"
+y no "ordenador", "celular" y no "móvil", "cotización" y no "presupuesto",
+"tú/ustedes" y nunca "vosotros". Los precios van en dólares. Antes de escribir
+copy, lee `docs/estrategia-comercial.md`: ahí están el posicionamiento, los
+dolores con sus datos y los sectores.
+
 ## Estilos
 Los tokens viven en `@theme` dentro de `src/app/globals.css`. No introduzcas
 valores de color en crudo en los componentes: si necesitas un color nuevo,
-añade el token. El ritmo vertical de las secciones lo fija el componente
+añade el token. La marca son dos colores, `azure-*` (azul) y `violeta-*`
+(morado); `alerta-*` (ámbar) es solo para avisos y escalados, nunca decorativo.
+Ojo: `bg-azure-500` con texto oscuro da 4.34:1 y NO pasa AA — usa la utilidad
+`bg-marca` con texto blanco (5.2:1) para cualquier elemento de acción. El ritmo vertical de las secciones lo fija el componente
 `Section`, no clases sueltas de padding.
 
 ## Contraste

@@ -112,7 +112,7 @@ export type Presupuesto = {
   subtotal: number;
   gestionResiduos: number;
   baseImponible: number;
-  iva: number;
+  impuesto: number;
   total: number;
   /** Siempre true: sin ver la obra, ningún presupuesto de reforma es cerrado. */
   orientativo: true;

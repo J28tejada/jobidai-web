@@ -21,7 +21,7 @@ export function Services({ services }: { services: Dictionary["services"] }) {
               <SpotlightCard className="flex h-full flex-col p-7 sm:p-8">
                 {/* Índice y nombre */}
                 <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-2xs tracking-widest text-ember-500">
+                  <span className="font-mono text-2xs tracking-widest text-azure-500">
                     {service.index}
                   </span>
                   <span
@@ -33,7 +33,7 @@ export function Services({ services }: { services: Dictionary["services"] }) {
                 <h3 className="mt-5 text-2xl text-ink-50 lg:min-h-[2lh]">
                   {service.name}
                 </h3>
-                <p className="mt-2 text-sm font-medium text-ember-400 lg:min-h-[2lh]">
+                <p className="mt-2 text-sm font-medium text-azure-400 lg:min-h-[2lh]">
                   {service.tagline}
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted">
@@ -44,7 +44,7 @@ export function Services({ services }: { services: Dictionary["services"] }) {
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-2.5">
                       <Check
-                        className="mt-0.5 size-4 shrink-0 text-ember-500"
+                        className="mt-0.5 size-4 shrink-0 text-azure-500"
                         aria-hidden
                       />
                       <span className="text-sm text-ink-200">{bullet}</span>

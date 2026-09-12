@@ -39,7 +39,7 @@ export function Footer({
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm text-muted transition-colors duration-200 hover:text-ember-400"
+                        className="text-sm text-muted transition-colors duration-200 hover:text-azure-400"
                       >
                         {link.label}
                       </a>
@@ -58,7 +58,7 @@ export function Footer({
           <p className="font-mono text-2xs text-faint">{footer.builtWith}</p>
           <a
             href="#contenido"
-            className="group inline-flex items-center gap-2 font-mono text-2xs tracking-widest text-faint uppercase transition-colors hover:text-ember-400"
+            className="group inline-flex items-center gap-2 font-mono text-2xs tracking-widest text-faint uppercase transition-colors hover:text-azure-400"
           >
             {footer.backToTop}
             <ArrowUp

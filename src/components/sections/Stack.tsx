@@ -37,7 +37,7 @@ export function Stack({ stack }: { stack: Dictionary["stack"] }) {
           {stack.groups.map((group) => (
             <RevealItem key={group.name}>
               <div className="surface-card edge-light h-full p-6">
-                <h3 className="font-mono text-2xs tracking-widest text-ember-400 uppercase">
+                <h3 className="font-mono text-2xs tracking-widest text-azure-400 uppercase">
                   {group.name}
                 </h3>
                 <ul className="mt-4 flex flex-col gap-2.5">
@@ -48,7 +48,7 @@ export function Stack({ stack }: { stack: Dictionary["stack"] }) {
                     >
                       <span
                         aria-hidden
-                        className="inline-block h-1 w-1 shrink-0 rounded-full bg-ember-500"
+                        className="inline-block h-1 w-1 shrink-0 rounded-full bg-azure-500"
                       />
                       {item}
                     </li>

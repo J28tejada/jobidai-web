@@ -23,8 +23,8 @@ export function EtapasFlujo({
             <span
               className={cn(
                 "h-0.5 w-full rounded-full transition-colors duration-500",
-                estado === "ok" && "bg-ember-500",
-                estado === "detenido" && "bg-ember-700",
+                estado === "ok" && "bg-azure-500",
+                estado === "detenido" && "bg-alerta-600",
                 estado === "pendiente" && "bg-ink-700",
               )}
             />
@@ -33,8 +33,8 @@ export function EtapasFlujo({
                 aria-hidden
                 className={cn(
                   "flex size-4 shrink-0 items-center justify-center rounded-full",
-                  estado === "ok" && "bg-ember-500 text-ink-950",
-                  estado === "detenido" && "bg-ember-700 text-ink-50",
+                  estado === "ok" && "bg-azure-600 text-white",
+                  estado === "detenido" && "bg-alerta-500 text-ink-950",
                   estado === "pendiente" && "bg-ink-700 text-faint",
                 )}
               >

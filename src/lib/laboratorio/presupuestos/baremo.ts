@@ -2,7 +2,7 @@ import type { Estancia, MotivoVisita, Partida } from "./tipos";
 
 /**
  * Baremo de precios unitarios. Es la "tarifa real" contra la que se valida
- * todo. Los precios son orientativos de mercado español y están sin IVA.
+ * todo. Precios orientativos de mercado dominicano, en dólares y sin ITBIS.
  *
  * Los sinónimos se escriben ya normalizados: minúsculas y sin tildes. El
  * extractor normaliza la entrada de la misma forma antes de comparar, así
@@ -14,7 +14,7 @@ export const BAREMO: Partida[] = [
     id: "demolicion_alicatado",
     nombre: "Demolición de alicatado existente",
     unidad: "m2",
-    precioUnitario: 18,
+    precioUnitario: 8,
     estancias: ["bano", "cocina"],
     rango: { min: 1, max: 120 },
     sinonimos: [
@@ -26,7 +26,7 @@ export const BAREMO: Partida[] = [
     id: "demolicion_solado",
     nombre: "Demolición de solado existente",
     unidad: "m2",
-    precioUnitario: 15,
+    precioUnitario: 7,
     estancias: ["bano", "cocina", "salon", "dormitorio", "pasillo", "vivienda"],
     rango: { min: 1, max: 300 },
     sinonimos: [
@@ -40,7 +40,7 @@ export const BAREMO: Partida[] = [
     id: "alicatado",
     nombre: "Alicatado cerámico, material y colocación",
     unidad: "m2",
-    precioUnitario: 42,
+    precioUnitario: 22,
     estancias: ["bano", "cocina"],
     rango: { min: 1, max: 120 },
     sinonimos: [
@@ -53,7 +53,7 @@ export const BAREMO: Partida[] = [
     id: "solado_porcelanico",
     nombre: "Solado de gres porcelánico, material y colocación",
     unidad: "m2",
-    precioUnitario: 45,
+    precioUnitario: 24,
     estancias: ["bano", "cocina", "salon", "dormitorio", "pasillo", "vivienda"],
     rango: { min: 1, max: 300 },
     sinonimos: [
@@ -65,7 +65,7 @@ export const BAREMO: Partida[] = [
     id: "pintura",
     nombre: "Pintura plástica lisa, dos manos",
     unidad: "m2",
-    precioUnitario: 12,
+    precioUnitario: 5,
     estancias: ["bano", "cocina", "salon", "dormitorio", "pasillo", "vivienda"],
     rango: { min: 5, max: 600 },
     sinonimos: ["pintar", "pintura", "dar una mano de pintura", "repintar"],
@@ -74,7 +74,7 @@ export const BAREMO: Partida[] = [
     id: "falso_techo",
     nombre: "Falso techo de placa de yeso laminado",
     unidad: "m2",
-    precioUnitario: 38,
+    precioUnitario: 18,
     estancias: ["bano", "cocina", "salon", "dormitorio", "pasillo", "vivienda"],
     rango: { min: 1, max: 200 },
     sinonimos: ["falso techo", "pladur en techo", "bajar el techo", "techo nuevo"],
@@ -85,7 +85,7 @@ export const BAREMO: Partida[] = [
     id: "banera_a_ducha",
     nombre: "Sustitución de bañera por plato de ducha",
     unidad: "ud",
-    precioUnitario: 850,
+    precioUnitario: 420,
     estancias: ["bano"],
     rango: { min: 1, max: 4 },
     sinonimos: [
@@ -98,7 +98,7 @@ export const BAREMO: Partida[] = [
     id: "mampara",
     nombre: "Mampara de ducha instalada",
     unidad: "ud",
-    precioUnitario: 380,
+    precioUnitario: 200,
     estancias: ["bano"],
     rango: { min: 1, max: 4 },
     sinonimos: ["mampara", "cerramiento de ducha"],
@@ -107,7 +107,7 @@ export const BAREMO: Partida[] = [
     id: "inodoro",
     nombre: "Sustitución de inodoro",
     unidad: "ud",
-    precioUnitario: 220,
+    precioUnitario: 120,
     estancias: ["bano"],
     rango: { min: 1, max: 6 },
     sinonimos: ["inodoro", "water", "vater", "taza del bano", "cambiar el wc"],
@@ -116,7 +116,7 @@ export const BAREMO: Partida[] = [
     id: "lavabo_mueble",
     nombre: "Lavabo con mueble suspendido",
     unidad: "ud",
-    precioUnitario: 450,
+    precioUnitario: 230,
     estancias: ["bano"],
     rango: { min: 1, max: 6 },
     sinonimos: ["lavabo", "mueble de bano", "lavamanos"],
@@ -125,7 +125,7 @@ export const BAREMO: Partida[] = [
     id: "fontaneria_bano",
     nombre: "Renovación de fontanería de baño",
     unidad: "ud",
-    precioUnitario: 780,
+    precioUnitario: 380,
     estancias: ["bano"],
     rango: { min: 1, max: 4 },
     sinonimos: [
@@ -139,7 +139,7 @@ export const BAREMO: Partida[] = [
     id: "muebles_cocina",
     nombre: "Muebles de cocina, alto y bajo",
     unidad: "ml",
-    precioUnitario: 420,
+    precioUnitario: 220,
     estancias: ["cocina"],
     rango: { min: 1, max: 20 },
     sinonimos: [
@@ -151,7 +151,7 @@ export const BAREMO: Partida[] = [
     id: "encimera",
     nombre: "Encimera de compacto fenólico",
     unidad: "ml",
-    precioUnitario: 280,
+    precioUnitario: 150,
     estancias: ["cocina"],
     rango: { min: 1, max: 20 },
     sinonimos: ["encimera", "encimera nueva", "cambiar la encimera"],
@@ -162,7 +162,7 @@ export const BAREMO: Partida[] = [
     id: "puerta_paso",
     nombre: "Puerta de paso lacada, instalada",
     unidad: "ud",
-    precioUnitario: 320,
+    precioUnitario: 170,
     estancias: ["salon", "dormitorio", "pasillo", "vivienda", "bano", "cocina"],
     rango: { min: 1, max: 15 },
     sinonimos: ["puerta", "puertas", "puerta de paso", "cambiar las puertas"],
@@ -171,7 +171,7 @@ export const BAREMO: Partida[] = [
     id: "ventana_pvc",
     nombre: "Ventana de PVC con vidrio bajo emisivo",
     unidad: "ud",
-    precioUnitario: 520,
+    precioUnitario: 280,
     estancias: ["salon", "dormitorio", "cocina", "bano", "vivienda"],
     rango: { min: 1, max: 20 },
     sinonimos: ["ventana", "ventanas", "cambiar las ventanas", "ventanas de pvc"],
@@ -180,7 +180,7 @@ export const BAREMO: Partida[] = [
     id: "electricidad_estancia",
     nombre: "Renovación de instalación eléctrica por estancia",
     unidad: "ud",
-    precioUnitario: 620,
+    precioUnitario: 320,
     estancias: ["bano", "cocina", "salon", "dormitorio", "vivienda"],
     rango: { min: 1, max: 10 },
     sinonimos: [
@@ -264,8 +264,8 @@ export const SINONIMOS_ESTANCIA: Record<Estancia, string[]> = {
 export const PARAMETROS = {
   /** Porcentaje del subtotal que se imputa a gestión de residuos y contenedor. */
   tasaResiduos: 0.04,
-  /** IVA reducido aplicable a reforma de vivienda en España. */
-  iva: 0.1,
+  /** ITBIS dominicano. Cambia según el país donde opere el negocio. */
+  impuesto: 0.18,
   validezDias: 30,
   /** Por debajo de esta confianza media, el caso se marca para revisión. */
   umbralConfianza: 0.55,

@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export function SpotlightCard({
   children,
   className,
-  spotlightColor = "var(--color-ember-500)",
+  spotlightColor = "var(--color-azure-500)",
 }: {
   children: ReactNode;
   className?: string;

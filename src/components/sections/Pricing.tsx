@@ -35,7 +35,7 @@ export function Pricing({ pricing }: { pricing: Dictionary["pricing"] }) {
                 {plan.featured ? (
                   <div
                     aria-hidden
-                    className="absolute -inset-px -z-10 rounded-[calc(var(--radius-xl)+1px)] bg-gradient-to-b from-ember-500/50 to-ember-500/0"
+                    className="absolute -inset-px -z-10 rounded-[calc(var(--radius-xl)+1px)] bg-gradient-to-b from-violeta-500/60 to-azure-500/0"
                   />
                 ) : null}
 
@@ -46,12 +46,21 @@ export function Pricing({ pricing }: { pricing: Dictionary["pricing"] }) {
                   )}
                 >
                   {plan.featured ? (
-                    <span className="absolute top-0 right-7 -translate-y-1/2 rounded-full bg-ember-500 px-3 py-1 font-mono text-2xs tracking-widest text-ink-950 uppercase">
+                    <span className="bg-marca absolute top-0 right-7 -translate-y-1/2 rounded-full px-3 py-1 font-mono text-2xs tracking-widest text-white uppercase">
                       {pricing.popular}
                     </span>
                   ) : null}
 
-                  <h3 className="text-xl text-ink-50">{plan.name}</h3>
+                  {/* El plan destacado necesita espacio a la derecha: ahí se
+                      sienta el badge y con nombres largos lo pisaba. */}
+                  <h3
+                    className={cn(
+                      "text-xl text-ink-50",
+                      plan.featured && "pr-32",
+                    )}
+                  >
+                    {plan.name}
+                  </h3>
 
                   <div className="mt-5 flex items-baseline gap-2">
                     <span className="font-mono text-2xs tracking-widest text-faint uppercase">
@@ -72,7 +81,7 @@ export function Pricing({ pricing }: { pricing: Dictionary["pricing"] }) {
                         <Check
                           className={cn(
                             "mt-0.5 size-4 shrink-0",
-                            plan.featured ? "text-ember-400" : "text-ember-500",
+                            plan.featured ? "text-azure-400" : "text-azure-500",
                           )}
                           aria-hidden
                         />

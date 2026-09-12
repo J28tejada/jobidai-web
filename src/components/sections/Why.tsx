@@ -19,7 +19,7 @@ export function Why({ why }: { why: Dictionary["why"] }) {
               <SpotlightCard className="flex h-full flex-col p-7">
                 <span
                   aria-hidden
-                  className="font-mono text-2xs tracking-widest text-ember-400"
+                  className="font-mono text-2xs tracking-widest text-azure-400"
                 >
                   {String(index + 1).padStart(2, "0")}
                 </span>

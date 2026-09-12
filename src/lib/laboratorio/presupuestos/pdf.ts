@@ -11,18 +11,16 @@ const A4 = { ancho: 595.28, alto: 841.89 };
 const MARGEN = 56;
 
 /**
- * Importe en formato español. Ojo: en castellano los números de exactamente
- * cuatro dígitos van SIN separador de millares ("1993,60"), y a partir de
- * cinco sí lo llevan ("12.345,67"). Intl ya aplica esa regla; escribir el
- * formateo a mano la rompe. Se instancia una vez y se reutiliza.
+ * Importe en dólares con formato dominicano: coma decimal y punto de millares.
+ * Se instancia una vez y se reutiliza.
  */
-const FORMATO_EUR = new Intl.NumberFormat("es-ES", {
+const FORMATO = new Intl.NumberFormat("es-DO", {
   minimumFractionDigits: 2,
   maximumFractionDigits: 2,
 });
 
 function eur(n: number): string {
-  return `${FORMATO_EUR.format(n)} EUR`;
+  return `US$ ${FORMATO.format(n)}`;
 }
 
 /**
@@ -164,7 +162,7 @@ export async function generarPdf(
   fila("Subtotal", presupuesto.subtotal);
   fila("Gestion de residuos", presupuesto.gestionResiduos);
   fila("Base imponible", presupuesto.baseImponible);
-  fila("IVA 10%", presupuesto.iva);
+  fila("ITBIS 18%", presupuesto.impuesto);
   y -= 10;
   regla();
   fila("TOTAL", presupuesto.total, true);
@@ -178,7 +176,7 @@ export async function generarPdf(
   const condiciones = [
     "Presupuesto ORIENTATIVO calculado a partir de la descripcion facilitada por el cliente.",
     "No sustituye a una visita tecnica: las mediciones reales pueden variar el importe final.",
-    "Precios de baremo vigentes en la fecha de emision. IVA reducido de reforma de vivienda.",
+    "Precios de baremo vigentes en la fecha de emision. ITBIS incluido segun tasa vigente.",
     "No incluye licencias, tasas municipales ni trabajos no detallados en este documento.",
   ];
   for (const c of condiciones) {

@@ -26,31 +26,31 @@ export function AmbientBackdrop({
         }}
       />
 
-      {/* Halo principal ámbar */}
+      {/* Halo principal azul */}
       <div
         className={cn(
           "absolute rounded-full blur-[110px] will-change-transform motion-safe:animate-drift",
           variant === "hero"
-            ? "-top-40 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 opacity-22"
+            ? "-top-40 left-1/2 h-[42rem] w-[42rem] -translate-x-1/2 opacity-25"
             : "-top-32 right-0 h-[26rem] w-[26rem] opacity-12",
         )}
         style={{
           background:
-            "radial-gradient(circle, var(--color-ember-500) 0%, transparent 68%)",
+            "radial-gradient(circle, var(--color-azure-500) 0%, transparent 68%)",
         }}
       />
 
-      {/* Halo secundario frío, aporta profundidad por contraste térmico */}
+      {/* Halo secundario morado: los dos colores de marca se mezclan en el fondo */}
       <div
         className={cn(
           "absolute rounded-full blur-[130px] will-change-transform motion-safe:animate-drift",
           variant === "hero"
-            ? "top-24 -left-32 h-[34rem] w-[34rem] opacity-12"
+            ? "top-24 -left-32 h-[34rem] w-[34rem] opacity-20"
             : "-bottom-40 -left-24 h-[24rem] w-[24rem] opacity-8",
         )}
         style={{
           background:
-            "radial-gradient(circle, var(--color-signal-500) 0%, transparent 70%)",
+            "radial-gradient(circle, var(--color-violeta-500) 0%, transparent 70%)",
           animationDelay: "-6s",
         }}
       />

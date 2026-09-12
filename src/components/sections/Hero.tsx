@@ -32,13 +32,13 @@ export function Hero({
           initial={reduceMotion ? false : { opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2.5 rounded-full border border-ember-500/25 bg-ember-500/8 py-1.5 pr-4 pl-2.5"
+          className="inline-flex items-center gap-2.5 rounded-full border border-azure-500/25 bg-azure-500/8 py-1.5 pr-4 pl-2.5"
         >
           <span className="relative flex h-2 w-2" aria-hidden>
-            <span className="absolute inline-flex h-full w-full rounded-full bg-ember-400 opacity-70 motion-safe:animate-pulse-ring" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-ember-400" />
+            <span className="absolute inline-flex h-full w-full rounded-full bg-azure-400 opacity-70 motion-safe:animate-pulse-ring" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-azure-400" />
           </span>
-          <span className="font-mono text-2xs tracking-widest text-ember-200 uppercase">
+          <span className="font-mono text-2xs tracking-widest text-azure-200 uppercase">
             {hero.status}
           </span>
         </motion.p>
@@ -64,7 +64,7 @@ export function Hero({
                       ease: [0.16, 1, 0.3, 1],
                     }}
                     className={`inline-block ${
-                      highlightWords.has(word) ? "text-ember-gradient" : ""
+                      highlightWords.has(word) ? "text-marca-gradient" : ""
                     }`}
                   >
                     {word}&nbsp;
@@ -139,7 +139,7 @@ export function Hero({
           >
             <div
               aria-hidden
-              className="absolute -inset-8 -z-10 rounded-[3rem] bg-ember-500/8 blur-3xl"
+              className="absolute -inset-8 -z-10 rounded-[3rem] bg-azure-500/8 blur-3xl"
             />
             <SystemDiagram locale={locale} />
           </motion.div>

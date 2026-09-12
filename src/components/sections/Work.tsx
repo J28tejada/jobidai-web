@@ -31,7 +31,7 @@ export function Work({
                   {/* Identidad del caso */}
                   <div className="flex flex-col">
                     <div className="flex items-center gap-3">
-                      <span className="rounded-full border border-ember-500/25 bg-ember-500/8 px-3 py-1 font-mono text-2xs tracking-widest text-ember-300 uppercase">
+                      <span className="rounded-full border border-azure-500/25 bg-azure-500/8 px-3 py-1 font-mono text-2xs tracking-widest text-azure-300 uppercase">
                         {item.kind}
                       </span>
                       <span className="font-mono text-2xs text-faint">
@@ -47,7 +47,7 @@ export function Work({
                       {item.metrics.map((metric) => (
                         <div key={metric.label} className="flex flex-col gap-1">
                           <dt className="sr-only">{metric.label}</dt>
-                          <dd className="font-display text-xl leading-none text-ember-400 tabular-nums">
+                          <dd className="font-display text-xl leading-none text-azure-400 tabular-nums">
                             {metric.value}
                           </dd>
                           <dd className="text-2xs leading-snug text-faint">
@@ -99,7 +99,7 @@ export function Work({
                       </p>
                     </div>
                     <div>
-                      <h4 className="font-mono text-2xs tracking-widest text-ember-400 uppercase">
+                      <h4 className="font-mono text-2xs tracking-widest text-azure-400 uppercase">
                         {locale === "es" ? "La solución" : "The solution"}
                       </h4>
                       <p className="mt-3 text-sm leading-relaxed text-ink-200">

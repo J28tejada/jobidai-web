@@ -2,7 +2,7 @@ import { PARAMETROS, buscarPartida } from "./baremo";
 import type { Extraccion, LineaPresupuesto, Presupuesto } from "./tipos";
 
 /** Redondeo a dos decimales sin arrastrar error de coma flotante. */
-function euros(valor: number): number {
+function dinero(valor: number): number {
   return Math.round(valor * 100) / 100;
 }
 
@@ -26,22 +26,22 @@ export function calcular(extraccion: Extraccion): Presupuesto {
       unidad: partida.unidad,
       medicion: detectada.medicion,
       precioUnitario: partida.precioUnitario,
-      importe: euros(detectada.medicion * partida.precioUnitario),
+      importe: dinero(detectada.medicion * partida.precioUnitario),
     });
   }
 
-  const subtotal = euros(lineas.reduce((s, l) => s + l.importe, 0));
-  const gestionResiduos = euros(subtotal * PARAMETROS.tasaResiduos);
-  const baseImponible = euros(subtotal + gestionResiduos);
-  const iva = euros(baseImponible * PARAMETROS.iva);
+  const subtotal = dinero(lineas.reduce((s, l) => s + l.importe, 0));
+  const gestionResiduos = dinero(subtotal * PARAMETROS.tasaResiduos);
+  const baseImponible = dinero(subtotal + gestionResiduos);
+  const impuesto = dinero(baseImponible * PARAMETROS.impuesto);
 
   return {
     lineas,
     subtotal,
     gestionResiduos,
     baseImponible,
-    iva,
-    total: euros(baseImponible + iva),
+    impuesto,
+    total: dinero(baseImponible + impuesto),
     orientativo: true,
     validezDias: PARAMETROS.validezDias,
   };

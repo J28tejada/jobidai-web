@@ -11,13 +11,16 @@ const base =
   "disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
+  // bg-marca pinta un color sólido (azure-600) y encima el degradado azul →
+  // morado. El sólido es lo que miden las herramientas de contraste: con
+  // texto blanco da 5.2:1. El degradado es decorativo y no altera esa medida.
   primary:
-    "bg-ember-500 text-ink-950 shadow-[0_0_0_0_var(--color-ember-500)] " +
-    "hover:bg-ember-400 hover:shadow-[0_8px_32px_-8px_var(--color-ember-500)] " +
+    "bg-marca text-white " +
+    "hover:shadow-[0_8px_32px_-8px_var(--color-violeta-500)] " +
     "hover:-translate-y-0.5 active:translate-y-0",
   secondary:
     "border border-hairline-strong bg-ink-800/60 text-ink-50 backdrop-blur-sm " +
-    "hover:border-ember-500/50 hover:bg-ink-700/60 hover:-translate-y-0.5 active:translate-y-0",
+    "hover:border-violeta-400/60 hover:bg-ink-700/60 hover:-translate-y-0.5 active:translate-y-0",
   ghost: "text-muted hover:text-ink-50",
 };
 

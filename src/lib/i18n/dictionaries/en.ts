@@ -2,21 +2,22 @@ import type { Dictionary } from "../types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Jobid — Custom websites, web apps and automation",
+    title: "Jobid — Custom software for growing businesses",
     description:
-      "I design and build high-impact websites, custom web applications and automations that remove manual work. One point of contact, from idea to launch.",
-    ogAlt: "Jobid — digital product design and development studio",
+      "Systems built around how your business already works: point of sale, scheduling, inventory, WhatsApp and e-invoicing. For small businesses across Latin America and Latino-owned businesses in the United States.",
+    ogAlt: "Jobid — custom software for small and micro businesses",
   },
 
   nav: {
     links: [
       { href: "#servicios", label: "Services" },
+      { href: "#sectores", label: "Industries" },
       { href: "#proceso", label: "Process" },
       { href: "#trabajo", label: "Work" },
       { href: "#precios", label: "Pricing" },
       { href: "#faq", label: "FAQ" },
     ],
-    cta: "Start a project",
+    cta: "Let\u0027s talk",
     menuOpen: "Open menu",
     menuClose: "Close menu",
     skipToContent: "Skip to content",
@@ -24,86 +25,258 @@ export const en: Dictionary = {
   },
 
   hero: {
-    status: "Available for 2 projects this quarter",
-    headline: ["Websites that sell.", "Systems that", "run themselves."],
-    highlight: "run themselves.",
+    status: "Working with businesses across Latin America and the U.S.",
+    headline: ["Software that adapts", "to your business.", "Not the other way."],
+    highlight: "Not the other way.",
     lede:
-      "I design and build the digital presence of businesses that have outgrown templates. Custom websites, internal applications and automations that give hours back every week. No account managers in between: you talk directly to the person building it.",
-    ctaPrimary: "Tell me about your project",
+      "If you run your business out of a notebook, a spreadsheet and WhatsApp — or you pay for a system that is too big and you only half use — there is a third option: software built around how you already work. You don't change your operation; the software fits it.",
+    ctaPrimary: "Tell me what you need",
     ctaSecondary: "See how I work",
     stats: [
-      { value: "2-6", label: "weeks per project" },
-      { value: "100%", label: "custom code, no templates" },
-      { value: "< 24h", label: "response time" },
+      { value: "100%", label: "built around your operation" },
+      { value: "2-6", label: "weeks to go live" },
+      { value: "0", label: "mandatory subscriptions" },
+    ],
+  },
+
+  dolores: {
+    eyebrow: "If any of these sound familiar",
+    title: "The problems that don't go away by working more hours",
+    lede:
+      "None of this is your fault: these are processes that grew by hand and have run out of road. All of them are fixable, and none of them require you to become a technology expert.",
+    items: [
+      {
+        id: "whatsapp",
+        titulo: "Your business lives in WhatsApp",
+        descripcion:
+          "The order, the agreed price, the delivery address and the complaint all live in a chat. If your salesperson leaves, the history leaves with them. And nobody knows how many quotes went out or how many closed.",
+        dato: "72%",
+        fuente: "of commerce in Latin America already runs through WhatsApp",
+      },
+      {
+        id: "factura",
+        titulo: "E-invoicing is no longer optional",
+        descripcion:
+          "In the Dominican Republic, e-CF is mandatory for small and micro businesses from November 15, 2026, with fines for missing it. Mexico, Colombia, Peru, Chile and Argentina already require it. I get you invoicing without you ever seeing an XML file.",
+        dato: "Nov 15",
+        fuente: "deadline for small and micro businesses in the DR",
+      },
+      {
+        id: "inventario",
+        titulo: "Nobody knows what's actually in stock",
+        descripcion:
+          "You're out of exactly what the customer wants, so you buy it in a rush at a premium. Meanwhile other stock has been sitting on the shelf for months with your money asleep in it.",
+        dato: "300-500",
+        fuente: "part numbers a small shop carries, almost always untracked",
+      },
+      {
+        id: "dependencia",
+        titulo: "Everything depends on one person",
+        descripcion:
+          "You or one key employee are the only ones who know the prices, who owes what, and how each thing gets done. If they get sick, the business stalls. The real question: can you take a week off?",
+      },
+      {
+        id: "margen",
+        titulo: "You invoice, you collect… but do you profit?",
+        descripcion:
+          "Bookkeeping arrives late and only serves to pay taxes. It doesn't tell you which product carries margin, which customer is profitable, or how much you're owed today.",
+      },
+      {
+        id: "mensualidades",
+        titulo: "You pay for software you half use",
+        descripcion:
+          "Three subscriptions, each with forty features of which you use six. And the one thing your business actually needs, none of them do.",
+      },
     ],
   },
 
   services: {
     eyebrow: "What I do",
-    title: "Three lines of work, one standard",
+    title: "Three ways to fix it, one standard",
     lede:
-      "Every project starts by understanding what actually moves the needle for your business. The tool comes second, never first.",
+      "We start by understanding how your business works today, quirks included. The tool gets chosen afterwards, never before.",
     items: [
       {
         id: "webs",
         index: "01",
-        name: "High-impact websites",
-        tagline: "Your best salesperson, working 24/7",
+        name: "Presence and sales",
+        tagline: "So they find you and can actually buy",
         description:
-          "Sites designed to convert, not just to look good. Information architecture built around your customer's real hesitation, measured performance, and search visibility from day one.",
+          "Your site and catalog wired to WhatsApp, which is where people actually message you. Built so customers see real prices and real availability, and can reach you in one tap.",
         bullets: [
-          "Original design, no recognisable templates",
-          "Core Web Vitals in the green",
-          "Technical SEO and structured data included",
-          "A dashboard so you can edit content without touching code",
+          "Catalog connected to your actual inventory",
+          "WhatsApp button with the message already written",
+          "Show up on Google when people search for what you sell",
+          "You change prices and photos yourself, no one else needed",
         ],
-        deliverable: "Typical delivery: 2 to 4 weeks",
+        deliverable: "Live in 2 to 4 weeks",
       },
       {
         id: "apps",
         index: "02",
-        name: "Custom web applications",
-        tagline: "The software your business needs and nobody sells",
+        name: "Custom systems",
+        tagline: "Built for how your business works, not the average one",
         description:
-          "Dashboards, client portals, internal tools and SaaS products. For when the spreadsheet runs out of road and off-the-shelf software forces you to work its way.",
+          "Point of sale, scheduling, inventory, work orders, case files or collections. Whatever your business does differently — the thing no off-the-shelf system accounts for — is accounted for here.",
         bullets: [
-          "Authentication, roles and permissions designed in",
-          "A data model built to grow without a rewrite",
-          "An interface meant to be used eight hours a day",
-          "Continuous deployment and a staging environment",
+          "Users and permissions: everyone sees only their part",
+          "Screens meant to be used all day, with no manual",
+          "Works on phone, tablet and desktop",
+          "Connects to what you already use instead of replacing everything",
         ],
-        deliverable: "Typical delivery: 4 to 10 weeks",
+        deliverable: "Live in 4 to 10 weeks",
       },
       {
         id: "automatizaciones",
         index: "03",
-        name: "Automation and AI",
-        tagline: "Stop paying for work a machine does better",
+        name: "Automation and invoicing",
+        tagline: "Stop doing by hand what a machine does better",
         description:
-          "I connect the tools you already use and remove the copy-paste between them. From simple flows to AI agents that read, classify and respond.",
+          "I connect what you already use and remove the copy-paste between them. Includes getting you compliant with whatever e-invoicing your country requires.",
         bullets: [
-          "Integration across CRM, invoicing, email and spreadsheets",
-          "Document and email processing with AI",
-          "Reports that generate and send themselves",
-          "Alerting and error handling so nothing fails silently",
+          "E-invoicing: e-CF, CFDI, DIAN or SUNAT depending on your country",
+          "Automatic WhatsApp replies for the questions you always get",
+          "Payment and appointment reminders that send themselves",
+          "Alerts when something breaks, so you don't find out late",
         ],
-        deliverable: "Typical delivery: 1 to 3 weeks",
+        deliverable: "Live in 1 to 3 weeks",
+      },
+    ],
+  },
+
+  sectores: {
+    eyebrow: "Who I work with",
+    title: "Businesses like yours, with problems like yours",
+    lede:
+      "Small and micro businesses. The ones starting from zero with technology, and the ones that already have something that has outgrown itself. If your trade isn't on the list, write anyway: the method is the same.",
+    nota:
+      "Every system is built from your actual operation. No two shops work the same way, and the software shouldn't either.",
+    hoyLabel: "How it runs today",
+    construyoLabel: "What I build you",
+    items: [
+      {
+        id: "salud",
+        nombre: "Dental and medical practices",
+        hoy: "Schedule in a notebook, confirmations by phone, records in a folder. Between 5 and 15 patients a week don't show up, and that slot can never be resold.",
+        construyo: [
+          "Scheduling with automatic WhatsApp confirmation and reminders",
+          "Waitlist: when someone cancels, the slot is offered to the next patient",
+          "Digital records with the fields your practice actually uses",
+          "Follow-up on unfinished treatments and unanswered quotes",
+        ],
+        entrada: "Start with appointment confirmations alone. Results show in two weeks.",
+      },
+      {
+        id: "legal",
+        nombre: "Attorneys and small firms",
+        hoy: "Case files scattered between folders and email. Deadlines held in someone's head. Billable hours that never get invoiced because nobody wrote them down.",
+        construyo: [
+          "Deadline tracking with alerts before anything expires",
+          "Time logged per case, with invoicing built from it",
+          "A portal where the client checks their case without calling",
+          "Contracts and filings generated from templates",
+        ],
+        entrada: "Start with deadline tracking. That's what keeps you up at night.",
+      },
+      {
+        id: "talleres",
+        nombre: "Auto repair shops",
+        hoy: "Work orders on paper or in the foreman's head. Parts with no tracking. Customers calling three times to ask if the car is ready.",
+        construyo: [
+          "Digital work orders: what came in, what was done, what parts it took",
+          "Using a part deducts it from inventory automatically",
+          "Automatic WhatsApp notice when the vehicle is ready",
+          "History by plate: what was done to that car and when",
+        ],
+        entrada: "Work orders with customer notifications. Phone calls drop immediately.",
+      },
+      {
+        id: "dealers",
+        nombre: "Car dealerships",
+        hoy: "Inventory in a spreadsheet, photos on the salesperson's phone, leads in a personal WhatsApp. Someone messages, nobody answers in time, the lead is gone.",
+        construyo: [
+          "Vehicle catalog with specs and photos, published on your site",
+          "Lead tracking by stage, with follow-up reminders",
+          "Automatic reply with the listing they asked about",
+          "Financing calculator right on the listing",
+        ],
+        entrada: "The catalog wired to WhatsApp. It sells faster and you can tell.",
+      },
+      {
+        id: "ropa",
+        nombre: "Clothing stores",
+        hoy: "One garment is fifteen size and color combinations, and nobody tracks them. Layaways written on paper that get lost. Answering \"do you have it in medium?\" a hundred times a day.",
+        construyo: [
+          "Inventory by size and color you can read at a glance",
+          "Online catalog showing what's genuinely in stock",
+          "Layaway and installment tracking",
+          "Automatic replies with price and availability",
+        ],
+        entrada: "The catalog with real stock. It ends the \"do you have medium?\" loop.",
+      },
+      {
+        id: "repuestos",
+        nombre: "Auto parts stores",
+        hoy: "Thousands of part numbers, and the cross-references live only in the owner's head. Quotes sent one by one over WhatsApp, all day long.",
+        construyo: [
+          "Search by vehicle: make, model and year, not just part number",
+          "Cross-references stored in the system, not in someone's memory",
+          "Automatic quotes with price and availability",
+          "Restock alerts before you run out of your fastest movers",
+        ],
+        entrada: "The vehicle search. It's what sets you apart from the shop next door.",
+      },
+      {
+        id: "tecnologia",
+        nombre: "Electronics stores",
+        hoy: "Serial numbers and IMEIs untracked, warranties on paper, repairs with no status. And prices moving with the exchange rate.",
+        construyo: [
+          "Inventory with serial numbers and warranty tied to the sale",
+          "Repair module with statuses and customer notifications",
+          "Price updates driven by the exchange rate",
+          "History per customer: what they bought and when",
+        ],
+        entrada: "Serial and warranty tracking. Stop losing warranty claims.",
+      },
+      {
+        id: "colegios",
+        nombre: "Schools and academies",
+        hoy: "Chasing late tuition eats days every month. Parent communication gets lost in chaotic WhatsApp groups.",
+        construyo: [
+          "Parent portal: balance, grades, attendance and announcements",
+          "Automatic payment reminders before the due date",
+          "Online enrollment that doesn't retype last year's data",
+          "Grades and attendance without loose sheets of paper",
+        ],
+        entrada: "The collections reminder. It pays for itself the first month.",
+      },
+      {
+        id: "comercio",
+        nombre: "Retail and point of sale",
+        hoy: "An off-the-shelf POS that doesn't do what your business needs, or plain pen and paper. Plus e-invoicing on top.",
+        construyo: [
+          "Point of sale with your business's specific quirks",
+          "E-invoicing as your country requires it",
+          "Owner's dashboard: what I sold, what I'm owed, what carries margin",
+          "Keeps working when the internet drops for a while",
+        ],
+        entrada: "POS and invoicing together. That's the urgent part.",
       },
     ],
   },
 
   process: {
     eyebrow: "How I work",
-    title: "A process with no surprises and no surprise invoices",
+    title: "No surprises, and no invoices that show up later",
     lede:
-      "You always know where we are, what's left and what it costs. Every phase ends with something you can see and click.",
+      "You always know where we are, what's left and what it costs. Every stage ends with something you can see and touch, not with a status report.",
     steps: [
       {
         number: "01",
         name: "Diagnosis",
         duration: "48 hours",
         description:
-          "A real conversation, not a sales demo. We come out of it with the problem defined, the scope closed, a fixed price and a delivery date in writing.",
+          "A real conversation, not a sales call. We come out with the problem clear, the scope closed, a fixed price and a date in writing. If it isn't worth it for you, I'll say so right there.",
       },
       {
         number: "02",
@@ -121,7 +294,7 @@ export const en: Dictionary = {
       },
       {
         number: "04",
-        name: "Launch and care",
+        name: "Go live",
         duration: "Ongoing",
         description:
           "Going live, measurement, training for your team and a 30-day warranty on everything delivered. After that, maintenance only if you want it.",
@@ -131,9 +304,9 @@ export const en: Dictionary = {
 
   work: {
     eyebrow: "The lab",
-    title: "Pieces built to prove a point, not to decorate",
+    title: "Software you can touch, not screenshots",
     lede:
-      "I would rather show you software that works than a wall of client logos. These are my own projects: open them, break them, and judge the thinking behind every decision.",
+      "I'd rather show you something working than a wall of logos. These are my own projects: open them, try to break them, and judge the thinking behind every decision yourself.",
     disclaimer:
       "Self-initiated demonstration projects. Work under NDA is shown on a call.",
     items: [
@@ -193,9 +366,9 @@ export const en: Dictionary = {
 
   stack: {
     eyebrow: "Tooling",
-    title: "Technology chosen on judgement, not on hype",
+    title: "Tools chosen on judgement, not on hype",
     lede:
-      "I use mature tools with large communities. If I disappeared tomorrow, any competent developer could pick your project up without an archaeology dig.",
+      "I use mature, well-known technology. If I disappeared tomorrow, any competent developer could pick your project up without deciphering anything strange.",
     groups: [
       {
         name: "Interface",
@@ -220,12 +393,12 @@ export const en: Dictionary = {
     eyebrow: "Why me",
     title: "What you get by working with one person",
     lede:
-      "I don't compete with twenty-person agencies on volume. I compete on judgement, speed, and the fact that you never talk to a middleman.",
+      "I don't compete with big agencies on volume, or with subscription platforms on entry price. I compete on the system being built for you, and on you talking directly to whoever builds it.",
     items: [
       {
-        title: "One point of contact",
+        title: "You talk to whoever builds it",
         description:
-          "The person listening on the call is the one designing, writing the code and answering when something breaks. Nothing is lost in internal translation.",
+          "The person listening is the one designing, writing the code and answering when something breaks. No salesperson in between promising things nobody can deliver.",
       },
       {
         title: "Fixed price before we start",
@@ -233,19 +406,19 @@ export const en: Dictionary = {
           "The quote is set after the diagnosis and doesn't move. If something gets harder on my side, that's my problem, not an extra line on your invoice.",
       },
       {
-        title: "The code is yours",
+        title: "The system is yours",
         description:
-          "Repository, domain, accounts and documentation in your name from day one. You stay because you want to, not because you can't leave.",
+          "Code, domain and accounts in your name from day one. No mandatory subscription for life. You stay because you want to, not because you can't leave.",
       },
       {
-        title: "Performance and accessibility as standard",
+        title: "Built for your staff, not for an expert",
         description:
-          "Core Web Vitals in the green, verified contrast, keyboard navigation and respect for people who prefer less motion. These are not billable extras.",
+          "Your team isn\u0027t technical and the software can\u0027t assume otherwise. Screens that make sense without a manual, that work on a phone and on slow internet.",
       },
       {
-        title: "Built for you to maintain",
+        title: "I teach you to run it",
         description:
-          "You get real documentation and a recorded training session. Your team can edit content and understand the system without depending on me.",
+          "Recorded video training and documentation in plain language. Your team can change prices, add products and understand the system without calling me.",
       },
       {
         title: "30-day warranty",
@@ -257,45 +430,45 @@ export const en: Dictionary = {
 
   pricing: {
     eyebrow: "Investment",
-    title: "Starting prices, no small print",
+    title: "Starting prices, no fine print",
     lede:
-      "Every project is quoted individually after the diagnosis. These are the real entry points for each line of work, so you know whether we're a fit before you write to me.",
+      "Every project is quoted separately after the diagnosis. These are the real entry points, so you know whether we're a fit before you write to me.",
     note:
-      "Prices in euros, excluding VAT. Paid in two parts: 50% to start, 50% on delivery. Projects above €6,000 can be split into monthly payments.",
+      "Prices in US dollars, before tax. Paid in two parts: half to start, half on delivery. Larger projects can be split into monthly payments. Ongoing support (from US$60/month) is optional — never required.",
     popular: "Most requested",
     plans: [
       {
-        id: "web",
-        name: "Website",
-        price: "€1,400",
+        id: "arranque",
+        name: "Starter",
+        price: "US$450",
         priceNote: "from",
         description:
-          "For businesses that need a solid presence that builds trust and captures leads.",
+          "For the business with nothing online yet that needs to start with the basics, done properly.",
         features: [
-          "Up to 6 sections with original design",
-          "Built for mobile, tablet and desktop",
-          "Technical SEO and structured data",
-          "Contact form wired to your inbox",
-          "Dashboard to edit copy and images",
-          "Analytics configured and explained",
+          "Website with your catalog or your services",
+          "WhatsApp wired up with the message pre-written",
+          "Show up on Google when people search for what you sell",
+          "Contact form that reaches your inbox and your phone",
+          "You change prices and photos yourself",
+          "Recorded training for you and your team",
           "30-day warranty",
         ],
-        cta: "Request a quote",
+        cta: "I want to start",
       },
       {
-        id: "aplicacion",
-        name: "Application",
-        price: "€4,500",
+        id: "sistema",
+        name: "Custom system",
+        price: "US$1,200",
         priceNote: "from",
         description:
-          "For teams that have outgrown spreadsheets and need software of their own.",
+          "For the business that has outgrown its spreadsheet or the generic system it's paying for.",
         features: [
-          "Everything in the Website tier",
-          "Users, roles and permissions",
-          "A data model designed for you",
-          "Integration with your current tools",
-          "Staging environment separate from production",
-          "Technical documentation and recorded training",
+          "Everything in Starter",
+          "Point of sale, scheduling, inventory or work orders",
+          "Users and permissions: everyone sees only their part",
+          "Modeled on your real operation, quirks included",
+          "Connects to the tools you already use",
+          "Owner's dashboard with what actually matters",
           "60-day warranty",
         ],
         cta: "Book a diagnosis",
@@ -304,102 +477,108 @@ export const en: Dictionary = {
       {
         id: "automatizacion",
         name: "Automation",
-        price: "€900",
+        price: "US$350",
         priceNote: "from",
         description:
-          "To remove one specific repetitive task that eats your team's hours today.",
+          "To remove one specific repetitive task, or to get compliant with e-invoicing.",
         features: [
-          "A map of the current and automated process",
-          "Connection between your existing tools",
-          "Document or email processing with AI",
-          "Error handling and alerting",
-          "A dashboard to monitor every run",
+          "E-invoicing for your country",
+          "One repetitive process solved end to end",
+          "Automatic WhatsApp replies for the usual questions",
+          "Payment or appointment reminders that send themselves",
+          "Alerts when something breaks",
           "Training for your team",
           "30-day warranty",
         ],
-        cta: "Calculate the saving",
+        cta: "Calculate my savings",
       },
     ],
   },
 
   faq: {
     eyebrow: "Before you write",
-    title: "The questions that always come up",
+    title: "What everybody asks",
     lede: "If yours isn't here, write to me and I'll answer with no strings attached.",
     items: [
       {
-        question: "How long does a project actually take?",
+        question: "Isn't a subscription tool cheaper for me?",
         answer:
-          "A website takes 2 to 4 weeks, an automation 1 to 3, and an application 4 to 10 depending on scope. The date is fixed in writing after the diagnosis and I keep it: if I slip on my side, I take 10% off for every week of delay.",
+          "In year one, almost always yes. From year two, no. An US$80/month subscription is US$1,920 over two years, and it still doesn't do what your business needs. A system of your own is paid once and it's yours. I'll run the numbers on your case during the diagnosis — if the subscription wins, I'll tell you.",
+      },
+      {
+        question: "My business is tiny. Am I too small for this?",
+        answer:
+          "Small businesses are exactly who I work with. A small business loses the most when everything lives in a notebook, because there's no spare staff to untangle the mess. And starting with one specific US$350 fix is within reach for almost anyone.",
+      },
+      {
+        question: "I'm not technical. Will I be able to run it?",
+        answer:
+          "That's design requirement number one. If your team needs a manual to use it, it's badly built. You get recorded video training and plain-language documentation. And during the warranty you can message me as often as you need.",
+      },
+      {
+        question: "How long does it really take?",
+        answer:
+          "An automation takes 1 to 3 weeks, a website 2 to 4, and a full system 4 to 10 depending on size. The date is fixed in writing after the diagnosis and I keep it: if I slip on my side, I take 10% off for every week of delay.",
       },
       {
         question: "What do you need from me to start?",
         answer:
-          "An hour of your time for the diagnosis and access to whatever you already have: copy, logo, existing accounts. If there are no materials, basic copy and identity are part of the project. I will never ask you to fill in a fifty-page brief.",
+          "An hour for the diagnosis and access to whatever you have: photos, a price list, the spreadsheet you use. If you have nothing, that works too — we map out how it should work together. I will never ask you to fill in a fifty-page brief.",
       },
       {
-        question: "What if I don't like the design?",
+        question: "Do you work outside the Dominican Republic?",
         answer:
-          "You see a clickable design before any production code is written, and it includes two rounds of changes. If after the first proposal you feel we're heading the wrong way, I refund the deposit in full and we close it at no cost.",
+          "Yes. I work remotely with businesses across Latin America and with Latino-owned businesses in the United States, in Spanish or English. I invoice in dollars and work around your time zone.",
       },
       {
-        question: "Do you work with companies outside Spain?",
+        question: "What if I don't like how it turns out?",
         answer:
-          "Yes. I work remotely with clients across Spain and Latin America, in Spanish or English, covering time zones between UTC-6 and UTC+2. I invoice in euros or dollars.",
+          "You see a clickable design on your phone before any production code is written, and it includes two rounds of changes. If after the first proposal you feel we're heading the wrong way, I refund the deposit in full and we close it there, at no cost.",
       },
       {
-        question: "Who owns the code and the accounts?",
+        question: "Who owns the system and the accounts?",
         answer:
-          "You do, from day one. The repository is created in your organisation, the domain and services are registered in your name, and you receive all the documentation. No forced dependency, no expiring licences.",
+          "You do, from day one. Code, domain and services are registered in your name and you get all the documentation. You're not tied to me or to any licence that expires.",
       },
       {
-        question: "Do you offer maintenance after delivery?",
+        question: "Can you help with e-invoicing?",
         answer:
-          "It's optional. After the warranty you can take a monthly support and improvement plan, or keep just what was delivered. Plenty of clients run it in-house, and that's exactly the point.",
-      },
-      {
-        question: "Why not WordPress or a visual builder?",
-        answer:
-          "I use them when they're the right answer, and I say so during the diagnosis. But for sites that need to be fast, distinctive and grow with the business, custom code is cheaper over two years: no clashing plugins, no annual licences, no platform ceiling.",
-      },
-      {
-        question: "Can I start with something small?",
-        answer:
-          "That's what I recommend. One specific automation or a landing page is a low-risk way to see how I work. Most large projects start exactly like that.",
+          "Yes, and it's urgent if you're in the Dominican Republic: it becomes mandatory for small and micro businesses on November 15, 2026, with fines for missing it. I get you invoicing without you ever touching an XML, and wire that invoicing into your inventory and sales, which is where the real value is.",
       },
     ],
   },
 
   contact: {
     eyebrow: "Next step",
-    title: "Tell me what you want to build",
+    title: "Tell me what's eating your time",
     lede:
-      "I reply within 24 working hours with an honest first read: whether it fits, how I'd approach it and what price range to expect. If it doesn't fit, I'll say so and point you to someone it does.",
+      "You don't need to know what you need or what it's called. Describe the problem in your own words and I'll reply within 24 working hours with an honest read: whether it's fixable, how I'd approach it and what price range to expect. If I'm not the right fit, I'll say so and point you to someone who is.",
     form: {
       name: "Name",
-      namePlaceholder: "What should I call you",
+      namePlaceholder: "What should I call you?",
       email: "Email",
-      emailPlaceholder: "you@company.com",
-      company: "Company",
+      emailPlaceholder: "you@yourbusiness.com",
+      company: "Your business",
       companyPlaceholder: "Optional",
-      service: "What you need",
+      service: "What do you need?",
       serviceOptions: [
-        "A website",
-        "A web application",
-        "An automation",
+        "Online presence and WhatsApp",
+        "A custom system",
+        "Automating something repetitive",
+        "E-invoicing",
         "Not sure yet",
       ],
-      budget: "Approximate budget",
+      budget: "What are you planning to invest?",
       budgetOptions: [
-        "Under €1,500",
-        "€1,500 - €5,000",
-        "€5,000 - €15,000",
-        "Over €15,000",
+        "Under US$500",
+        "US$500 - US$1,500",
+        "US$1,500 - US$5,000",
+        "Over US$5,000",
         "I'd rather discuss it",
       ],
       message: "Give me the context",
       messagePlaceholder:
-        "What problem you want to solve, what you've already tried, and when you need it.",
+        "What problem do you want to solve? What have you already tried? When do you need it? Write it the way you'd tell a friend.",
       submit: "Send message",
       submitting: "Sending...",
       successTitle: "Message received",
@@ -408,14 +587,14 @@ export const en: Dictionary = {
       errorRequired: "This field is required",
       errorEmail: "Enter a valid email address",
       errorGeneric:
-        "That didn't send. Write to me directly at hola@jobid.ai and we'll sort it out.",
+        "That didn't send. Write to me directly at hola@jobid.ai or on WhatsApp and we'll sort it out.",
       privacy:
         "Your details are used only to reply to you. No mailing lists, no third parties.",
     },
     direct: [
+      { label: "WhatsApp", value: "Message me directly", href: "#contacto" },
       { label: "Email", value: "hola@jobid.ai", href: "mailto:hola@jobid.ai" },
-      { label: "Calendar", value: "Book 30 minutes", href: "#contacto" },
-      { label: "LinkedIn", value: "Connect", href: "#contacto" },
+      { label: "Calendar", value: "Grab 30 minutes", href: "#contacto" },
     ],
   },
 
@@ -499,7 +678,7 @@ export const en: Dictionary = {
         subtotal: "Subtotal",
         residuos: "Waste handling",
         base: "Taxable base",
-        iva: "VAT 10%",
+        iva: "ITBIS 18%",
         total: "Total",
         orientativo:
           "Indicative quote computed from the customer's description. It does not replace a site visit.",
@@ -600,19 +779,20 @@ export const en: Dictionary = {
 
   footer: {
     tagline:
-      "I design and build websites, applications and automations for businesses ready to stop improvising online.",
+      "Custom software for small and micro businesses across Latin America and for Latino-owned businesses in the United States.",
     sections: [
       {
         title: "Services",
         links: [
-          { href: "#servicios", label: "High-impact websites" },
-          { href: "#servicios", label: "Custom applications" },
-          { href: "#servicios", label: "Automation and AI" },
+          { href: "#servicios", label: "Presence and sales" },
+          { href: "#servicios", label: "Custom systems" },
+          { href: "#servicios", label: "Automation and invoicing" },
         ],
       },
       {
         title: "Studio",
         links: [
+          { href: "#sectores", label: "Industries" },
           { href: "#proceso", label: "Process" },
           { href: "#trabajo", label: "Work" },
           { href: "#precios", label: "Pricing" },
@@ -628,7 +808,7 @@ export const en: Dictionary = {
       },
     ],
     rights: "All rights reserved.",
-    builtWith: "Designed and built from scratch. No templates.",
+    builtWith: "Built to measure. No templates.",
     backToTop: "Back to top",
   },
 };

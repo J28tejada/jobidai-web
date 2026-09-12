@@ -36,6 +36,36 @@ export type Dictionary = {
       deliverable: string;
     }[];
   };
+  dolores: {
+    eyebrow: string;
+    title: string;
+    lede: string;
+    items: {
+      id: string;
+      titulo: string;
+      descripcion: string;
+      /** Dato de mercado que respalda el dolor. Opcional. */
+      dato?: string;
+      fuente?: string;
+    }[];
+  };
+
+  sectores: {
+    eyebrow: string;
+    title: string;
+    lede: string;
+    nota: string;
+    hoyLabel: string;
+    construyoLabel: string;
+    items: {
+      id: string;
+      nombre: string;
+      hoy: string;
+      construyo: string[];
+      entrada: string;
+    }[];
+  };
+
   process: {
     eyebrow: string;
     title: string;

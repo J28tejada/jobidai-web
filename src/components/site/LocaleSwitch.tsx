@@ -47,7 +47,7 @@ export function LocaleSwitch({
             className={cn(
               "rounded-full px-2.5 py-1 font-mono text-2xs tracking-widest uppercase transition-colors duration-200",
               isActive
-                ? "bg-ember-500 text-ink-950"
+                ? "bg-marca text-white"
                 : "text-faint hover:text-ink-100",
             )}
           >

@@ -17,8 +17,8 @@ type Errors = Partial<Record<"name" | "email" | "message", string>>;
 const fieldClass =
   "w-full rounded-lg border border-hairline bg-ink-900/70 px-4 py-3 text-sm text-ink-50 " +
   "placeholder:text-faint transition-colors duration-200 " +
-  "hover:border-hairline-strong focus:border-ember-500/60 focus:outline-none " +
-  "aria-[invalid=true]:border-ember-600";
+  "hover:border-hairline-strong focus:border-azure-500/60 focus:outline-none " +
+  "aria-[invalid=true]:border-alerta-500";
 
 const labelClass = "font-mono text-2xs tracking-widest text-faint uppercase";
 
@@ -120,7 +120,7 @@ export function Contact({ contact }: { contact: Dictionary["contact"] }) {
                     <dd>
                       <a
                         href={entry.href}
-                        className="group inline-flex items-center gap-2 text-sm text-ink-100 transition-colors hover:text-ember-400"
+                        className="group inline-flex items-center gap-2 text-sm text-ink-100 transition-colors hover:text-azure-400"
                       >
                         {entry.value}
                         <ArrowRight
@@ -146,7 +146,7 @@ export function Contact({ contact }: { contact: Dictionary["contact"] }) {
                   role="status"
                   aria-live="polite"
                 >
-                  <span className="flex size-14 items-center justify-center rounded-full bg-ember-500/12 text-ember-400">
+                  <span className="flex size-14 items-center justify-center rounded-full bg-azure-500/12 text-azure-400">
                     <Check className="size-7" aria-hidden />
                   </span>
                   <h3 className="text-2xl text-ink-50">{t.successTitle}</h3>
@@ -213,7 +213,7 @@ export function Contact({ contact }: { contact: Dictionary["contact"] }) {
 
                   <div className="flex flex-col gap-2">
                     <label htmlFor={`${formId}-message`} className={labelClass}>
-                      {t.message} <span aria-hidden className="text-ember-500">*</span>
+                      {t.message} <span aria-hidden className="text-alerta-400">*</span>
                     </label>
                     <textarea
                       id={`${formId}-message`}
@@ -230,7 +230,7 @@ export function Contact({ contact }: { contact: Dictionary["contact"] }) {
                     {errors.message ? (
                       <p
                         id={`${formId}-message-error`}
-                        className="text-xs text-ember-400"
+                        className="text-xs text-alerta-300"
                       >
                         {errors.message}
                       </p>
@@ -240,7 +240,7 @@ export function Contact({ contact }: { contact: Dictionary["contact"] }) {
                   {formError ? (
                     <p
                       role="alert"
-                      className="flex items-start gap-2.5 rounded-lg border border-ember-600/40 bg-ember-900/20 px-4 py-3 text-sm text-ember-200"
+                      className="flex items-start gap-2.5 rounded-lg border border-alerta-600/40 bg-alerta-900/25 px-4 py-3 text-sm text-alerta-200"
                     >
                       <Mail className="mt-0.5 size-4 shrink-0" aria-hidden />
                       {formError}
@@ -300,7 +300,7 @@ function Field({
       <label htmlFor={id} className={labelClass}>
         {label}{" "}
         {required ? (
-          <span aria-hidden className="text-ember-500">
+          <span aria-hidden className="text-alerta-400">
             *
           </span>
         ) : null}
@@ -317,7 +317,7 @@ function Field({
         className={fieldClass}
       />
       {error ? (
-        <p id={`${id}-error`} className="text-xs text-ember-400">
+        <p id={`${id}-error`} className="text-xs text-alerta-300">
           {error}
         </p>
       ) : null}

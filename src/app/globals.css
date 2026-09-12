@@ -5,39 +5,58 @@
    Dirección de arte: "Ingeniería cálida".
    Base casi negra con temperatura cálida, acento ámbar incandescente y
    tipografía editorial. Toda la identidad vive en estos tokens: cambiar
-   --color-ember-* y --color-ink-* reescribe el sitio entero.
+   --color-azure-* y --color-violeta-* y --color-ink-* reescribe el sitio entero.
    ========================================================================== */
 
 @theme {
-  /* --- Neutros: escala "ink", negro con temperatura cálida --------------- */
-  --color-ink-50: #f7f6f4;
-  --color-ink-100: #ebe9e5;
-  --color-ink-200: #d4d1ca;
-  --color-ink-300: #a8a49b;
-  --color-ink-400: #78746c;
-  --color-ink-500: #514e48;
-  --color-ink-600: #363430;
-  --color-ink-700: #232220;
-  --color-ink-800: #171614;
-  --color-ink-900: #0f0e0d;
-  --color-ink-950: #080807;
+  /* --- Neutros: casi negro con temperatura fría ------------------------- */
+  /* Antes eran cálidos. Con una marca azul-morado, un neutro cálido hace que
+     el azul se vea sucio; el frío lo deja limpio. */
+  --color-ink-50: #f5f6fa;
+  --color-ink-100: #e8eaf2;
+  --color-ink-200: #ced2e2;
+  --color-ink-300: #a4abc4;
+  --color-ink-400: #757e9c;
+  --color-ink-500: #4e5673;
+  --color-ink-600: #343b52;
+  --color-ink-700: #232839;
+  --color-ink-800: #171b28;
+  --color-ink-900: #0e111b;
+  --color-ink-950: #070910;
 
-  /* --- Acento: ámbar incandescente --------------------------------------- */
-  --color-ember-50: #fff4ed;
-  --color-ember-100: #ffe6d5;
-  --color-ember-200: #ffc9aa;
-  --color-ember-300: #ffa374;
-  --color-ember-400: #ff7238;
-  --color-ember-500: #ff5a1f;
-  --color-ember-600: #f03d06;
-  --color-ember-700: #c72c07;
-  --color-ember-800: #9e250e;
-  --color-ember-900: #7f220f;
+  /* --- Marca 1: azul de comunicación (el azul de Azure) ------------------ */
+  --color-azure-50: #eff6fc;
+  --color-azure-100: #deecf9;
+  --color-azure-200: #c7e0f4;
+  --color-azure-300: #8fbce6;
+  --color-azure-400: #3b9ae1;
+  --color-azure-500: #0078d4;
+  --color-azure-600: #106ebe;
+  --color-azure-700: #005a9e;
+  --color-azure-800: #004578;
+  --color-azure-900: #002f52;
 
-  /* --- Soporte: cian frío para contraste térmico -------------------------- */
-  --color-signal-300: #7dd3fc;
-  --color-signal-400: #38bdf8;
-  --color-signal-500: #0ea5e9;
+  /* --- Marca 2: morado ---------------------------------------------------- */
+  --color-violeta-50: #f5f1fb;
+  --color-violeta-100: #e9e2f7;
+  --color-violeta-200: #d3c6ee;
+  --color-violeta-300: #b49fe0;
+  --color-violeta-400: #9b7fd4;
+  --color-violeta-500: #8661c5;
+  --color-violeta-600: #6e4cae;
+  --color-violeta-700: #5c2e91;
+  --color-violeta-800: #4a2475;
+  --color-violeta-900: #371a58;
+
+  /* --- Alerta: ámbar, solo para avisos y escalados ----------------------- */
+  /* Deliberadamente fuera de la marca: un aviso debe leerse como aviso, no
+     como decoración. */
+  --color-alerta-200: #fde3b0;
+  --color-alerta-300: #fbd38d;
+  --color-alerta-400: #f6ad3c;
+  --color-alerta-500: #e8900c;
+  --color-alerta-600: #c2740a;
+  --color-alerta-900: #5a3504;
 
   /* --- Semánticos --------------------------------------------------------- */
   --color-canvas: var(--color-ink-950);
@@ -45,13 +64,17 @@
   --color-raised: var(--color-ink-800);
   --color-hairline: color-mix(in oklab, var(--color-ink-100) 10%, transparent);
   --color-hairline-strong: color-mix(in oklab, var(--color-ink-100) 18%, transparent);
-  /* Jerarquía de texto en tres pasos. Los tres valores superan 4.5:1 sobre
-     todos los fondos del sitio (canvas #080807, sección tintada #131210 y
-     tarjeta #171614), verificado con axe-core. No los oscurezcas sin volver
-     a medir: el gris anterior (#6b675f) se quedaba en 3.3:1 e incumplía AA. */
-  --color-text: #fbfaf9;
-  --color-muted: #b0aba3;
-  --color-faint: #8f8a80;
+
+  /* Jerarquía de texto en tres pasos. Los tres superan 4.5:1 sobre canvas,
+     sección tintada y tarjeta, verificado con axe-core. No los oscurezcas
+     sin volver a medir. */
+  --color-text: #f7f8fc;
+  --color-muted: #b0b6c9;
+  --color-faint: #8b92a8;
+
+  /* Degradado de marca: azul a morado. Es la firma visual del sitio. */
+  --color-marca-desde: var(--color-azure-500);
+  --color-marca-hasta: var(--color-violeta-500);
 
   /* --- Tipografía ---------------------------------------------------------- */
   --font-display: var(--font-bricolage), "Georgia", serif;
@@ -170,14 +193,14 @@
 
   /* Foco visible coherente en todo el sitio */
   :focus-visible {
-    outline: 2px solid var(--color-ember-400);
+    outline: 2px solid var(--color-azure-400);
     outline-offset: 3px;
     border-radius: var(--radius-xs);
   }
 
   ::selection {
-    background-color: var(--color-ember-500);
-    color: var(--color-ink-950);
+    background-color: var(--color-azure-500);
+    color: #ffffff;
   }
 
   ::-webkit-scrollbar { width: 10px; height: 10px; }
@@ -214,16 +237,27 @@
   @media (width >= 80rem) { padding-inline: 2.5rem; }
 }
 
-/* Texto con degradado ámbar, para palabras clave dentro de un titular */
-@utility text-ember-gradient {
+/* Texto con degradado de marca, para palabras clave dentro de un titular */
+@utility text-marca-gradient {
   background-image: linear-gradient(
     100deg,
-    var(--color-ember-300) 0%,
-    var(--color-ember-500) 45%,
-    var(--color-ember-700) 100%
+    var(--color-azure-300) 0%,
+    var(--color-azure-400) 35%,
+    var(--color-violeta-400) 100%
   );
   background-clip: text;
   color: transparent;
+}
+
+/* Superficie con degradado de marca. El color sólido va primero para que las
+   herramientas de contraste puedan medirlo; el degradado es decorativo. */
+@utility bg-marca {
+  background-color: var(--color-azure-600);
+  background-image: linear-gradient(
+    100deg,
+    var(--color-azure-600) 0%,
+    var(--color-violeta-600) 100%
+  );
 }
 
 /* Superficie de tarjeta: fondo elevado + borde capilar + brillo superior */
@@ -291,7 +325,7 @@
   font-size: var(--text-xs);
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-ember-400);
+  color: var(--color-azure-400);
 }
 
 /* ============================================================================

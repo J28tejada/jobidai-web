@@ -55,7 +55,7 @@ export function Process({ process }: { process: Dictionary["process"] }) {
             }}
           >
             <motion.div
-              className="h-full w-full origin-top bg-gradient-to-b from-ember-500 via-ember-500 to-ember-700"
+              className="h-full w-full origin-top bg-gradient-to-b from-azure-500 via-azure-500 to-azure-700"
               style={{ scaleY: reduceMotion ? 1 : scaleY }}
             />
           </div>
@@ -66,7 +66,7 @@ export function Process({ process }: { process: Dictionary["process"] }) {
                 <div className="flex gap-6 sm:gap-8">
                   {/* Marcador numerado */}
                   <div className="relative z-10 flex size-12 shrink-0 items-center justify-center rounded-full border border-hairline-strong bg-ink-900 sm:size-18">
-                    <span className="font-mono text-sm text-ember-400 sm:text-lg">
+                    <span className="font-mono text-sm text-azure-400 sm:text-lg">
                       {step.number}
                     </span>
                   </div>

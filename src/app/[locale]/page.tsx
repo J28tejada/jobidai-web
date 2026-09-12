@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/sections/Hero";
+import { Dolores } from "@/components/sections/Dolores";
 import { Services } from "@/components/sections/Services";
+import { Sectores } from "@/components/sections/Sectores";
 import { Process } from "@/components/sections/Process";
 import { Work } from "@/components/sections/Work";
 import { Stack } from "@/components/sections/Stack";
@@ -32,7 +34,9 @@ export default async function HomePage({
       />
 
       <Hero hero={dict.hero} locale={locale} />
+      <Dolores dolores={dict.dolores} />
       <Services services={dict.services} />
+      <Sectores sectores={dict.sectores} />
       <Process process={dict.process} />
       <Work work={dict.work} locale={locale} />
       <Stack stack={dict.stack} />

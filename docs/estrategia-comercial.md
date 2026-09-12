@@ -8,6 +8,41 @@
 
 ---
 
+## 0. Alcance de la fase 1
+
+**Decisión (septiembre 2026): la facturación electrónica queda fuera de la
+primera etapa.**
+
+Es un dolor real y con fecha límite, pero como primer producto es mala apuesta:
+
+- Es una línea **regulada**. Un error tuyo se convierte en una multa del cliente.
+- Obliga a **operar infraestructura por cliente de forma continua** (tres
+  servicios web públicos: recepción, aprobación comercial y autenticación).
+  Ver `docs/facturacion-electronica-rd.md`.
+- El **certificado digital y el estado del RNC** dependen de terceros y del
+  propio cliente. Los retrasos te los achacan a ti.
+- Compite de frente con el **Facturador Gratuito de la DGII**, que es gratis.
+
+La investigación está hecha y guardada. Se retoma cuando haya clientes,
+rodaje y una forma clara de cobrar lo recurrente.
+
+### En qué sí se enfoca la fase 1
+
+Problemas sin regulación de por medio, con resultado visible en semanas:
+
+1. **Responder a tiempo.** Quien contesta en menos de un minuto cierra hasta
+   8 veces más. Automatizar lo repetitivo de WhatsApp.
+2. **Cotizar rápido.** Ya hay una demo funcionando: es el argumento más fácil
+   de enseñar.
+3. **Saber qué hay en el inventario.** Lo que se mueve, lo que está muerto,
+   lo que hay que pedir.
+4. **Que las citas se confirmen solas.** Aplica a salud, talleres y servicios.
+5. **Cobrar sin perseguir.** Recordatorios antes del vencimiento.
+6. **Saber si se está ganando.** Panel del dueño con tres números.
+7. **Sacar el conocimiento de la cabeza de una persona.**
+
+---
+
 ## 1. Posicionamiento
 
 **Base:** República Dominicana.
@@ -67,7 +102,7 @@ frecuentes se automaticen.
 hasta 8 veces más. Un negocio que contesta al día siguiente está perdiendo esas
 ventas sin enterarse.
 
-### 2.2 La factura electrónica ya no es opcional
+### 2.2 La factura electrónica ya no es opcional — APLAZADO a fase 2
 
 **El dato (RD):** por la Ley 32-23, el e-CF es obligatorio. Grandes nacionales
 desde mayo 2024, grandes locales y medianos desde noviembre 2025, y **micro,
@@ -84,6 +119,10 @@ y sus ventas, que es donde está el valor real.
 
 **Ojo:** cada país tiene su régimen (CFDI en México, DIAN en Colombia, SUNAT en
 Perú, AFIP en Argentina, SII en Chile). El gancho se replica cambiando la sigla.
+
+> ⚠️ **Fuera de la fase 1.** Ver la sección 0 y el informe completo en
+> `docs/facturacion-electronica-rd.md`. No se anuncia en la web ni en el
+> contenido hasta que se decida cómo cobrar la operación recurrente.
 
 ### 2.3 Nadie sabe qué hay en el inventario
 
@@ -311,7 +350,6 @@ No son sectores, son piezas que se venden a casi cualquiera:
 | **Punto de venta a medida** | Cualquier comercio | Vender, facturar e inventariar en una sola pantalla, con las particularidades del negocio |
 | **CRM básico** | Quien vende con seguimiento | Saber cuántos prospectos hay y en qué punto está cada uno |
 | **Asistente de ventas por WhatsApp** | Todos | Responder al instante lo repetitivo y pasar a una persona lo que importa |
-| **Facturación electrónica** | Todos, por ley | Cumplir con el fisco sin entender el XML |
 | **Panel del dueño** | Todos | Cuánto vendí, cuánto me deben, qué me deja margen |
 
 ---
@@ -365,7 +403,7 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 3. "Tu dentista pierde entre 5 y 15 citas por semana. Eso es un sueldo."
 4. "¿Puedes irte de vacaciones una semana sin que el negocio se pare?"
 5. "Facturas, cobras, pagas… ¿pero sabes qué producto te deja margen?"
-6. "El 15 de noviembre la factura electrónica es obligatoria para tu negocio. ¿Ya empezaste?"
+6. "El cliente te escribió a las 11 de la noche. ¿Cuándo le contestaste?"
 7. "Pagas tres mensualidades de sistemas que usas al 20%."
 
 ### Ganchos de contraste (a medida vs genérico)
@@ -387,7 +425,7 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 ### Ganchos educativos (construyen autoridad)
 
 16. "Tres preguntas que tu negocio debería poder responder en 10 segundos."
-17. "Qué es la factura electrónica y por qué te afecta aunque seas pequeño."
+17. "Cómo saber cuánto te deben hoy, sin abrir el Excel."
 18. "Cómo saber si un sistema te está quedando chico."
 19. "La diferencia entre digitalizarse y comprar software."
 
@@ -429,13 +467,9 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 ## 7. Pendientes
 
 - [ ] Validar los precios con dos o tres clientes reales antes de publicarlos.
-- [ ] Confirmar el calendario e-CF de la DGII antes de usarlo en publicidad.
-- [ ] Leer `docs/facturacion-electronica-rd.md`: los requisitos reales de la
-      DGII obligan a exponer tres servicios web por cliente, lo que implica un
-      costo recurrente que hoy la web no contempla.
 - [ ] Definir si se atiende EEUU con precios distintos y cómo se comunica.
-- [ ] Decidir si se abre una línea específica de facturación electrónica en RD
-      antes de noviembre 2026: es la oportunidad con fecha más cercana.
+- [ ] Fase 2: retomar facturación electrónica cuando haya clientes y una
+      forma definida de cobrar la operación recurrente.
 
 ---
 

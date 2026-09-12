@@ -4,7 +4,7 @@ export const es: Dictionary = {
   meta: {
     title: "Jobid — Software a la medida para negocios que crecen",
     description:
-      "Sistemas hechos a la medida de cómo tu negocio ya trabaja: punto de venta, agenda, inventario, WhatsApp y facturación electrónica. Para micro y pequeños negocios de América Latina y del público latino en Estados Unidos.",
+      "Sistemas hechos a la medida de cómo tu negocio ya trabaja: punto de venta, agenda, inventario, órdenes de trabajo y WhatsApp conectado. Para micro y pequeños negocios de América Latina y del público latino en Estados Unidos.",
     ogAlt: "Jobid — software a la medida para micro y pequeños negocios",
   },
 
@@ -54,12 +54,12 @@ export const es: Dictionary = {
         fuente: "del comercio en América Latina ya pasa por WhatsApp",
       },
       {
-        id: "factura",
-        titulo: "La factura electrónica ya no es opcional",
+        id: "respuesta",
+        titulo: "Cuando contestas, ya compraron en otro lado",
         descripcion:
-          "En República Dominicana el e-CF es obligatorio para micro y pequeños negocios desde el 15 de noviembre de 2026, con multas por incumplir. En México, Colombia, Perú, Chile y Argentina ya aplica. Te pongo a facturar sin que tengas que entender un XML.",
-        dato: "15 nov",
-        fuente: "fecha límite para micro y pequeños en RD",
+          "El cliente escribe a las nueve de la noche, o mientras estás atendiendo a otro. Cuando respondes al día siguiente, ya resolvió con quien le contestó primero. No es falta de ganas: es que no hay quien conteste a esa hora.",
+        dato: "8×",
+        fuente: "más ventas cierran los negocios que responden en menos de un minuto",
       },
       {
         id: "inventario",
@@ -129,14 +129,14 @@ export const es: Dictionary = {
       {
         id: "automatizaciones",
         index: "03",
-        name: "Automatización y facturación",
+        name: "Automatización que devuelve horas",
         tagline: "Deja de hacer a mano lo que una máquina hace mejor",
         description:
-          "Conecto lo que ya usas y elimino el copiar y pegar entre una cosa y otra. Incluye ponerte al día con la facturación electrónica que exige tu país.",
+          "Conecto lo que ya usas y elimino el copiar y pegar entre una cosa y otra. Empezamos por la tarea que más tiempo te come, no por la más vistosa.",
         bullets: [
-          "Facturación electrónica: e-CF, CFDI, DIAN, SUNAT según tu país",
           "Respuestas automáticas en WhatsApp para lo que siempre preguntan",
-          "Recordatorios de cobro y de citas que salen solos",
+          "Cotizaciones que salen en segundos, no en una hora",
+          "Recordatorios de cobro y de citas que se envían solos",
           "Avisos cuando algo falla, para que no te enteres tarde",
         ],
         deliverable: "Andando en 1 a 3 semanas",
@@ -253,14 +253,14 @@ export const es: Dictionary = {
       {
         id: "comercio",
         nombre: "Comercio en general y punto de venta",
-        hoy: "Un punto de venta genérico que no hace lo que tu negocio necesita, o de plano la libreta. Y la factura electrónica encima.",
+        hoy: "Un punto de venta genérico que no hace lo que tu negocio necesita, o de plano la libreta. Al cerrar el día nadie sabe con certeza cuánto entró ni cuánto falta.",
         construyo: [
           "Punto de venta con las particularidades de tu negocio",
-          "Facturación electrónica según lo que exige tu país",
+          "Cierre de caja que cuadra solo al final del día",
           "Panel del dueño: cuánto vendí, cuánto me deben, qué deja margen",
           "Funciona aunque se caiga el internet un rato",
         ],
-        entrada: "Punto de venta y facturación juntos. Es lo urgente.",
+        entrada: "El cierre de caja y el panel del dueño. Se nota desde el primer día.",
       },
     ],
   },
@@ -483,10 +483,10 @@ export const es: Dictionary = {
         price: "US$350",
         priceNote: "desde",
         description:
-          "Para eliminar una tarea repetitiva concreta, o para ponerte al día con la facturación electrónica.",
+          "Para eliminar una tarea repetitiva concreta que hoy le come horas a tu equipo.",
         features: [
-          "Facturación electrónica según tu país",
           "Un proceso repetitivo resuelto de punta a punta",
+          "Cotizaciones automáticas a partir del mensaje del cliente",
           "Respuestas automáticas de WhatsApp para lo de siempre",
           "Recordatorios de cobro o de citas que salen solos",
           "Avisos cuando algo falla",
@@ -544,9 +544,9 @@ export const es: Dictionary = {
           "Tú, desde el primer día. El código, el dominio y los servicios van a tu nombre y recibes toda la documentación. No quedas amarrado a mí ni a ninguna licencia que se vence.",
       },
       {
-        question: "¿Me ayudas con la factura electrónica?",
+        question: "Ya tengo un sistema. ¿Hay que botarlo todo?",
         answer:
-          "Sí, y es urgente si estás en República Dominicana: para micro y pequeños negocios es obligatoria desde el 15 de noviembre de 2026, con multas por incumplir. Te pongo a facturar sin que tengas que entender un XML, y de paso conecto esa facturación con tu inventario y tus ventas, que es donde está el valor real.",
+          "Casi nunca. Lo normal es que el sistema que tienes haga bien dos o tres cosas y mal el resto. Primero miramos qué sí te sirve y lo conectamos; lo que falta se construye alrededor. Botar todo y empezar de cero es caro y riesgoso, y solo lo recomiendo cuando de verdad no tiene arreglo. Eso lo sabremos en el diagnóstico, y te lo digo sin adornos.",
       },
     ],
   },
@@ -568,7 +568,7 @@ export const es: Dictionary = {
         "Presencia en internet y WhatsApp",
         "Un sistema a la medida",
         "Automatizar algo repetitivo",
-        "Facturación electrónica",
+        "Mejorar un sistema que ya tengo",
         "Todavía no lo tengo claro",
       ],
       budget: "¿Cuánto tienes pensado invertir?",
@@ -789,7 +789,7 @@ export const es: Dictionary = {
         links: [
           { href: "#servicios", label: "Presencia y ventas" },
           { href: "#servicios", label: "Sistemas a la medida" },
-          { href: "#servicios", label: "Automatización y facturación" },
+          { href: "#servicios", label: "Automatización" },
         ],
       },
       {

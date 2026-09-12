@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: "Jobid — Custom software for growing businesses",
     description:
-      "Systems built around how your business already works: point of sale, scheduling, inventory, WhatsApp and e-invoicing. For small businesses across Latin America and Latino-owned businesses in the United States.",
+      "Systems built around how your business already works: point of sale, scheduling, inventory, work orders and WhatsApp wired in. For small businesses across Latin America and Latino-owned businesses in the United States.",
     ogAlt: "Jobid — custom software for small and micro businesses",
   },
 
@@ -54,12 +54,12 @@ export const en: Dictionary = {
         fuente: "of commerce in Latin America already runs through WhatsApp",
       },
       {
-        id: "factura",
-        titulo: "E-invoicing is no longer optional",
+        id: "respuesta",
+        titulo: "By the time you reply, they've bought elsewhere",
         descripcion:
-          "In the Dominican Republic, e-CF is mandatory for small and micro businesses from November 15, 2026, with fines for missing it. Mexico, Colombia, Peru, Chile and Argentina already require it. I get you invoicing without you ever seeing an XML file.",
-        dato: "Nov 15",
-        fuente: "deadline for small and micro businesses in the DR",
+          "The customer messages at nine at night, or while you're serving someone else. By the time you answer the next day, they've already sorted it with whoever replied first. It isn't a lack of effort: there's nobody to answer at that hour.",
+        dato: "8×",
+        fuente: "more sales close for businesses that reply in under a minute",
       },
       {
         id: "inventario",
@@ -129,13 +129,13 @@ export const en: Dictionary = {
       {
         id: "automatizaciones",
         index: "03",
-        name: "Automation and invoicing",
+        name: "Automation that gives hours back",
         tagline: "Stop doing by hand what a machine does better",
         description:
-          "I connect what you already use and remove the copy-paste between them. Includes getting you compliant with whatever e-invoicing your country requires.",
+          "I connect what you already use and remove the copy-paste between them. We start with the task that eats the most time, not the flashiest one.",
         bullets: [
-          "E-invoicing: e-CF, CFDI, DIAN or SUNAT depending on your country",
           "Automatic WhatsApp replies for the questions you always get",
+          "Quotes that go out in seconds instead of an hour",
           "Payment and appointment reminders that send themselves",
           "Alerts when something breaks, so you don't find out late",
         ],
@@ -253,14 +253,14 @@ export const en: Dictionary = {
       {
         id: "comercio",
         nombre: "Retail and point of sale",
-        hoy: "An off-the-shelf POS that doesn't do what your business needs, or plain pen and paper. Plus e-invoicing on top.",
+        hoy: "An off-the-shelf POS that doesn't do what your business needs, or plain pen and paper. At closing time nobody knows for sure what came in or what's missing.",
         construyo: [
           "Point of sale with your business's specific quirks",
-          "E-invoicing as your country requires it",
+          "End-of-day cash close that reconciles itself",
           "Owner's dashboard: what I sold, what I'm owed, what carries margin",
           "Keeps working when the internet drops for a while",
         ],
-        entrada: "POS and invoicing together. That's the urgent part.",
+        entrada: "The cash close and the owner's dashboard. It shows from day one.",
       },
     ],
   },
@@ -480,10 +480,10 @@ export const en: Dictionary = {
         price: "US$350",
         priceNote: "from",
         description:
-          "To remove one specific repetitive task, or to get compliant with e-invoicing.",
+          "To remove one specific repetitive task that eats your team's hours today.",
         features: [
-          "E-invoicing for your country",
           "One repetitive process solved end to end",
+          "Automatic quotes built from the customer's message",
           "Automatic WhatsApp replies for the usual questions",
           "Payment or appointment reminders that send themselves",
           "Alerts when something breaks",
@@ -541,9 +541,9 @@ export const en: Dictionary = {
           "You do, from day one. Code, domain and services are registered in your name and you get all the documentation. You're not tied to me or to any licence that expires.",
       },
       {
-        question: "Can you help with e-invoicing?",
+        question: "I already have a system. Do I have to scrap it?",
         answer:
-          "Yes, and it's urgent if you're in the Dominican Republic: it becomes mandatory for small and micro businesses on November 15, 2026, with fines for missing it. I get you invoicing without you ever touching an XML, and wire that invoicing into your inventory and sales, which is where the real value is.",
+          "Almost never. Usually the system you have does two or three things well and the rest badly. First we look at what actually works and wire into it; what's missing gets built around it. Scrapping everything and starting over is expensive and risky, and I only recommend it when the current system genuinely can't be salvaged. We'll know during the diagnosis, and I'll tell you straight.",
       },
     ],
   },
@@ -565,7 +565,7 @@ export const en: Dictionary = {
         "Online presence and WhatsApp",
         "A custom system",
         "Automating something repetitive",
-        "E-invoicing",
+        "Improving a system I already have",
         "Not sure yet",
       ],
       budget: "What are you planning to invest?",
@@ -786,7 +786,7 @@ export const en: Dictionary = {
         links: [
           { href: "#servicios", label: "Presence and sales" },
           { href: "#servicios", label: "Custom systems" },
-          { href: "#servicios", label: "Automation and invoicing" },
+          { href: "#servicios", label: "Automation" },
         ],
       },
       {

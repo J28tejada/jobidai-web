@@ -1,5 +1,11 @@
 # Facturación electrónica RD — requisitos reales para ser emisor
 
+> 🗓️ **APLAZADO A FASE 2 (decisión de septiembre 2026).** Esta línea no se
+> ofrece por ahora: es regulada, exige operar infraestructura por cliente y
+> compite con una herramienta gratuita del Estado. La investigación queda
+> completa y lista para retomarse. Ver la sección 0 de
+> `docs/estrategia-comercial.md`.
+
 > **Fuentes.** Las secciones 1 a 6 salen de **dos documentos oficiales de la
 > DGII** leídos íntegros:
 > - *Guía para ser Emisor Electrónico* (Impuestos Internos, enero 2025)

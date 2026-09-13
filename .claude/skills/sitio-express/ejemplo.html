@@ -1,0 +1,286 @@
+<!--
+  EJEMPLO DE REFERENCIA — "tienda de venta de productos" (el rubro piloto).
+
+  ESTE NEGOCIO NO EXISTE. Nombre, dirección, horario, productos y precios son
+  inventados a propósito, para mostrar cómo queda la plantilla llena. El número
+  de WhatsApp (809-555-0100) está en el rango 555-01XX que NANP reserva para
+  ficción, así que no le escribe a nadie real.
+
+  Al armar un sitio de verdad, la regla del SKILL.md manda: ningún dato que no
+  hayas visto. No copies estos datos, copia la estructura.
+
+  Paleta: retail general → --marca #0063b1 / --marca-oscuro #004e8c.
+  Verificada con: node .claude/skills/sitio-express/contraste.mjs '#0063b1' '#004e8c'
+-->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Variedades El Progreso — Artículos para el hogar en Santo Domingo Este</title>
+<meta name="description" content="Variedades El Progreso: artículos para el hogar en Santo Domingo Este. Escríbenos por WhatsApp." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --marca: #0063b1;
+    --marca-oscuro: #004e8c;
+    --fondo: #ffffff;
+    --fondo-alt: #f6f7f9;
+    --texto: #16181d;
+    --texto-suave: #5b6170;
+    --borde: #e4e7ec;
+    --radio: 14px;
+    --ancho: 1080px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    color: var(--texto);
+    background: var(--fondo);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { line-height: 1.15; margin: 0; font-weight: 800; letter-spacing: -0.02em; }
+  p { margin: 0; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .envoltura { width: 100%; max-width: var(--ancho); margin: 0 auto; padding: 0 20px; }
+  .seccion { padding: 56px 0; }
+  .seccion--alt { background: var(--fondo-alt); }
+
+  .titulo-hero { font-size: clamp(2rem, 1.3rem + 3.2vw, 3.4rem); }
+  .titulo-seccion { font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2.1rem); }
+
+  .barra {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--borde);
+  }
+  .barra__fila {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; min-height: 62px; padding-top: 8px; padding-bottom: 8px;
+  }
+  .barra__nombre { font-weight: 800; font-size: 1.05rem; }
+  .barra .boton { white-space: nowrap; flex-shrink: 0; }
+
+  .boton {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px; border-radius: 999px;
+    font-weight: 600; font-size: 0.95rem; text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .boton--wa { background: #25d366; color: #05240f; }
+  .boton--wa:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -8px rgba(37,211,102,0.7); }
+  .boton--marca { background: var(--marca); color: #fff; }
+  .boton--marca:hover { transform: translateY(-1px); }
+  .boton--borde { border: 1.5px solid var(--borde); color: var(--texto); }
+  .boton--sm { padding: 9px 16px; font-size: 0.88rem; }
+
+  .hero { padding: 56px 0 48px; }
+  .hero__eyebrow {
+    display: inline-block; font-size: 0.8rem; font-weight: 600;
+    color: var(--marca-oscuro); background: color-mix(in srgb, var(--marca) 12%, white);
+    padding: 6px 14px; border-radius: 999px; margin-bottom: 18px;
+  }
+  .hero__lede { font-size: 1.1rem; color: var(--texto-suave); margin-top: 16px; max-width: 56ch; }
+  .hero__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+  .rejilla { display: grid; gap: 16px; margin-top: 32px; }
+  .rejilla--3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .rejilla--4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+  .tarjeta {
+    display: flex; flex-direction: column;
+    background: var(--fondo); border: 1px solid var(--borde);
+    border-radius: var(--radio); padding: 22px;
+  }
+  .tarjeta__titulo { font-size: 1.05rem; font-weight: 700; }
+  .tarjeta__texto { color: var(--texto-suave); font-size: 0.95rem; margin-top: 8px; }
+  .tarjeta__precio { font-weight: 800; color: var(--marca-oscuro); margin-top: auto; padding-top: 14px; font-size: 1.05rem; }
+
+  .dato { display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid var(--borde); }
+  .dato:last-child { border-bottom: 0; }
+  .dato__etiqueta { font-weight: 700; min-width: 92px; font-size: 0.95rem; }
+  .dato__valor { color: var(--texto-suave); font-size: 0.95rem; }
+
+  .cierre {
+    background: var(--marca); color: #fff;
+    border-radius: var(--radio); padding: 36px 28px; text-align: center;
+  }
+  .cierre h2 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); }
+  .cierre p { margin-top: 10px; opacity: 0.92; }
+
+  .wa-flotante {
+    position: fixed; right: 16px; bottom: 16px; z-index: 60;
+    background: #25d366; color: #05240f;
+    width: 56px; height: 56px; border-radius: 50%;
+    display: grid; place-items: center;
+    box-shadow: 0 10px 26px -8px rgba(0,0,0,0.45);
+    text-decoration: none;
+  }
+
+  .pie { padding: 28px 0 88px; color: var(--texto-suave); font-size: 0.88rem; text-align: center; }
+
+  .previa {
+    background: #1d2129; color: #fff; text-align: center;
+    padding: 10px 16px; font-size: 0.85rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="previa">Vista previa para Variedades El Progreso · disponible hasta el 20 de septiembre</div>
+
+<header class="barra">
+  <div class="envoltura barra__fila">
+    <span class="barra__nombre">Variedades El Progreso</span>
+    <a class="boton boton--wa boton--sm" href="https://wa.me/18095550100?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20preguntar%20por%20un%20art%C3%ADculo">
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main>
+  <section class="envoltura hero">
+    <span class="hero__eyebrow">Artículos para el hogar en Santo Domingo Este</span>
+    <h1 class="titulo-hero">Lo que te hace falta en casa, sin dar la vuelta a la ciudad</h1>
+    <p class="hero__lede">
+      Plásticos, limpieza, útiles escolares y pequeños electrodomésticos en un
+      solo lugar. Pregúntanos por WhatsApp si tenemos lo que buscas y te
+      decimos en el momento, antes de que salgas de tu casa.
+    </p>
+    <div class="hero__acciones">
+      <a class="boton boton--wa" href="https://wa.me/18095550100?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20preguntar%20por%20un%20art%C3%ADculo">Pedir por WhatsApp</a>
+      <a class="boton boton--borde" href="#productos">Ver lo que tenemos</a>
+    </div>
+  </section>
+
+  <section class="seccion seccion--alt" id="productos">
+    <div class="envoltura">
+      <h2 class="titulo-seccion">Lo que más se lleva la gente</h2>
+      <div class="rejilla rejilla--4">
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Plásticos para el hogar</h3>
+          <p class="tarjeta__texto">Zafacones, tinas, organizadores, ganchos de ropa y envases para nevera.</p>
+          <p class="tarjeta__precio">Desde RD$95</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Limpieza y desinfección</h3>
+          <p class="tarjeta__texto">Cloro, mistolín, suavizante, trapeadores y guantes, por unidad o por galón.</p>
+          <p class="tarjeta__precio">Desde RD$70</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Útiles escolares</h3>
+          <p class="tarjeta__texto">Cuadernos, mochilas, lápices y todo lo de la lista, armado por grado.</p>
+          <p class="tarjeta__precio">Desde RD$45</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Electrodomésticos pequeños</h3>
+          <p class="tarjeta__texto">Licuadoras, abanicos, planchas y grequeras de marcas conocidas.</p>
+          <p class="tarjeta__precio">Desde RD$1,850</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Cocina y mesa</h3>
+          <p class="tarjeta__texto">Ollas, sartenes, vasos, cubiertos y juegos de platos para el diario.</p>
+          <p class="tarjeta__precio">Desde RD$180</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Juguetes y regalos</h3>
+          <p class="tarjeta__texto">Para cumpleaños de último minuto: juguetes, bolsitas y envoltura.</p>
+          <p class="tarjeta__precio">Desde RD$150</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Ferretería básica</h3>
+          <p class="tarjeta__texto">Bombillos, extensiones, cinta aislante, candados y herramienta de mano.</p>
+          <p class="tarjeta__precio">Desde RD$120</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Higiene personal</h3>
+          <p class="tarjeta__texto">Jabón, pasta dental, desodorante y pañales, por unidad o por paquete.</p>
+          <p class="tarjeta__precio">Desde RD$60</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="porque">
+    <div class="envoltura">
+      <h2 class="titulo-seccion">Por qué comprar aquí</h2>
+      <div class="rejilla rejilla--3">
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Te decimos si hay, antes de que vengas</h3>
+          <p class="tarjeta__texto">Escribe por WhatsApp con lo que buscas. Si no lo tenemos, te lo decimos claro y te ahorramos el viaje.</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Delivery en la zona</h3>
+          <p class="tarjeta__texto">Llevamos en Los Mina, Alma Rosa y San Isidro el mismo día si pides antes de las 4:00 p.m.</p>
+        </article>
+        <article class="tarjeta">
+          <h3 class="tarjeta__titulo">Apartado sin recargo</h3>
+          <p class="tarjeta__texto">Aparta con un abono y lo guardamos hasta 15 días. Útil para regreso a clases y Navidad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion seccion--alt" id="contacto">
+    <div class="envoltura">
+      <h2 class="titulo-seccion">Dónde estamos</h2>
+      <div class="rejilla rejilla--3">
+        <div class="tarjeta">
+          <div class="dato">
+            <span class="dato__etiqueta">Horario</span>
+            <span class="dato__valor">Lunes a sábado, 8:00 a.m. a 7:00 p.m. Domingos, 9:00 a.m. a 1:00 p.m.</span>
+          </div>
+          <div class="dato">
+            <span class="dato__etiqueta">Dirección</span>
+            <span class="dato__valor">Av. San Vicente de Paúl 112, Alma Rosa, Santo Domingo Este</span>
+          </div>
+          <div class="dato">
+            <span class="dato__etiqueta">Teléfono</span>
+            <span class="dato__valor">809-555-0100</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="envoltura">
+      <div class="cierre">
+        <h2>¿Buscas algo en específico?</h2>
+        <p>Mándanos el nombre o una foto y te decimos si lo tenemos y cuánto está.</p>
+        <div style="margin-top: 22px;">
+          <a class="boton boton--wa" href="https://wa.me/18095550100?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20preguntar%20por%20un%20art%C3%ADculo">
+            Escríbenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="envoltura">© <span id="anio"></span> Variedades El Progreso · Santo Domingo Este</div>
+</footer>
+
+<a class="wa-flotante" href="https://wa.me/18095550100?text=Hola%2C%20vi%20su%20p%C3%A1gina%20y%20quiero%20preguntar%20por%20un%20art%C3%ADculo" aria-label="Escribir por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.4.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/>
+    <path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z"/>
+  </svg>
+</a>
+
+<script>
+  document.documentElement.lang = "es";
+  document.getElementById("anio").textContent = new Date().getFullYear();
+</script>

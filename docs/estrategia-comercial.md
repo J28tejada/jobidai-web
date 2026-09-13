@@ -468,9 +468,21 @@ que abre la puerta a la venta — nunca la abres tú primero.
 
 No es una mensualidad por el software. Es una mensualidad por un **servicio
 que sigue operando**: el número de WhatsApp que contesta solo, el sistema
-que pide reseñas, el que agenda citas. Eso consume infraestructura de verdad
-(hosting, conexión a WhatsApp, monitoreo) todos los meses, así que es honesto
-cobrarlo aparte. La distinción que hay que sostener siempre en el copy:
+que pide reseñas, el que agenda citas.
+
+Ojo con cómo se justifica. Contestar mensajes por WhatsApp **no cuesta**:
+desde el 1 de noviembre de 2024 Meta dejó de cobrar las conversaciones de
+servicio, así que mientras el cliente te haya escrito en las últimas 24 horas,
+todas tus respuestas de texto libre son gratis e ilimitadas. Solo se paga por
+plantillas que inicia el negocio (marketing, utilidad, autenticación). El costo
+real por cliente es de centavos: inferencia y hosting compartido.
+
+Entonces la mensualidad no se sostiene diciendo "me cuesta infraestructura",
+porque es mentira y se cae sola. Se sostiene por lo que sí es cierto: **es
+atención continua**. Alguien revisa las respuestas malas, actualiza los precios
+cuando el negocio los cambia, y responde cuando algo se rompe. Eso es tiempo, y
+el tiempo es lo único que de verdad escala con la cantidad de clientes. La
+distinción que hay que sostener siempre en el copy:
 
 - **El sitio es tuyo. Sin mensualidad, sin candado.** Se cumple.
 - **El sistema que lo mantiene funcionando es un servicio aparte, opcional,
@@ -485,7 +497,7 @@ cobrarlo aparte. La distinción que hay que sostener siempre en el copy:
 | AI Studio: un prompt arma el sitio en 3–5 min | Una herramienta propia: a partir del nombre del negocio, el rubro (uno de los 9 que ya tenemos mapeados) y la ciudad, se genera un sitio de una página con nuestro propio sistema de diseño, listo en minutos |
 | Enlace de vista previa temporal, bajo control del que lo construye | Un subdominio o ruta de vista previa propia (por ejemplo `previa.jobid.ai/nombre-negocio`), que se puede despublicar de verdad a los 7 días |
 | El "sistema" detrás: texto automático a leads, solicitud de reseñas, chat que responde y agenda — todo nativo de la plataforma | Aquí es donde de verdad reemplazamos GoHighLevel por trabajo propio: el asistente de WhatsApp que ya íbamos a construir como demo del laboratorio, más recordatorios de reseña y de citas. No es una automatización de plataforma, es software nuestro |
-| Cuentas de cliente ilimitadas bajo una sola suscripción → el costo marginal por cliente nuevo es casi cero | Nosotros no tenemos ese atajo: cada cliente activo consume WhatsApp y hosting de verdad. El precio mensual tiene que cubrir ese costo real, no asumir margen de plataforma ajena |
+| Cuentas de cliente ilimitadas bajo una sola suscripción → el costo marginal por cliente nuevo es casi cero | Nuestro costo marginal también es casi cero, pero por otra razón: responder mensajes entrantes es gratis en WhatsApp. Lo que no escala es el tiempo de montar y atender a cada cliente, y ahí es donde tiene que apoyarse el precio |
 | Herramienta que busca negocios sin sitio web en Google Maps | Un script sencillo, muy replicable: buscar por rubro y ciudad, filtrar los que no tienen sitio en su ficha |
 | Dominio siempre a nombre del cliente, nunca de la agencia | Ya es un principio de Jobid. Se mantiene igual |
 
@@ -523,11 +535,11 @@ Sin precio, sin paquetes, sin "por cierto, también ofrezco...". El plazo de
 
 > Qué bueno que te gustó. El sitio es gratis: si lo quieres, hago los ajustes
 > que necesites y lo paso a tu dominio. Lo que sí tiene costo es lo que lo
-> mantiene funcionando: que los mensajes nuevos se contesten solos por
-> WhatsApp, que a tus clientes se les pida la reseña en Google sin que tengas
-> que acordarte, y que el sitio pueda responder preguntas y agendar citas.
-> Eso son US$[x] al mes, sin contrato, cancelas cuando quieras. Si quieres
-> seguir, te mando el link de pago y esta semana lo dejamos conectado.
+> mantiene funcionando: que tu WhatsApp conteste solo cuando te escriban,
+> con tus precios y tu horario, a la hora que sea. Cuando no sepa algo, te
+> pasa la conversación. Y cada semana te mando un resumen de qué te
+> preguntaron. Son US$50 al mes por adelantado, sin contrato, cancelas cuando
+> quieras. Si te sirve, te mando el link de pago y esta semana lo conectamos.
 
 Esta pregunta la hace el cliente, nunca tú. Si no la hace, no se fuerza: se
 espera, o se despublica el sitio a los 7 días sin más.
@@ -557,23 +569,71 @@ construí uno" (que se abre, porque es un regalo) es enorme.
 
 ### Cómo escala
 
-Un cliente a US$[x]/mes es el punto de partida, no el techo. Diez clientes en
-el sistema es un ingreso recurrente real corriendo solo. Y cada cliente que
+Un cliente a US$50/mes es el punto de partida, no el techo. Diez clientes en
+el sistema son US$500 al mes corriendo solos. Y cada cliente que
 ya confía en ti para su presencia digital es candidato natural para subir a
 los paquetes de Sistema a la medida cuando su negocio lo pida.
 
-### Lo que falta decidir antes de correr esto
+### El sitio de regalo, después de septiembre 2026
 
-- **Precio mensual real del "sistema en marcha".** El video usa US$297,
-  precio de mercado estadounidense. Para el micro negocio de RD/LatAm hay que
-  encontrar el número que de verdad se pueda pagar y que a la vez cubra el
-  costo de WhatsApp y hosting por cliente. Se valida con los primeros clientes
-  reales, igual que el resto de los precios.
-- **Qué incluye la v1 del "sistema".** El candidato natural: respuesta
-  automática por WhatsApp (foco 1 de la fase 1) + confirmación de citas
-  (foco 4). Reseñas de Google se puede sumar después.
-- **Canal y rubro del piloto.** Grupos de Facebook o de WhatsApp de Santo
-  Domingo, con el rubro que más cómodo resulte para empezar.
+Se sigue regalando, pero **no genérico**. La decisión: hacer **un solo sitio
+base, bien trabajado**, al nivel del de Jobid, y personalizar ese para cada
+negocio. Un sitio mediocre regalado no genera la reacción que abre la venta —
+genera un "gracias" cortés y nada más. La skill `sitio-express` queda en pausa
+hasta que exista esa base. Las webs a la medida siguen siendo servicio premium,
+cotizado y solo por petición específica.
+
+---
+
+## 6.1. La oferta de pago, v1 — "WhatsApp que contesta solo"
+
+Esto es lo que se cobra de verdad. Definido en septiembre 2026.
+
+### Precio
+
+**US$50 al mes, pagado por adelantado.** Sin instalación, sin contrato, sin
+mínimo de permanencia. El primer mes se paga antes de conectar nada: nunca hay
+servicio funcionando sin pagar. Banda de ajuste US$45–60 según rubro; el
+mercado de EEUU admite 2 a 3 veces eso por el mismo trabajo.
+
+### Qué se entrega
+
+1. **Tu número contesta solo, 24/7**, en menos de un minuto.
+2. **Contesta desde tu información**: catálogo, precios, horario, dirección,
+   zonas de delivery y preguntas frecuentes. Si algo no está cargado, dice que
+   no sabe. Nunca inventa un precio — es la misma tesis del motor de
+   cotizaciones: el analizador lee, el código decide.
+3. **Escalado a persona**: cuando no sabe, o cuando el cliente pide hablar con
+   alguien, te pasa la conversación y te avisa.
+4. **Resumen semanal**: qué te preguntaron, qué no supo contestar, cuántas
+   conversaciones entraron.
+
+El punto 4 no es un extra. Un bot que contesta bien es **invisible**: el dueño
+no ve trabajo, ve silencio, y a los dos meses se pregunta por qué paga. El
+resumen semanal le pone cara al servicio. Y de paso te dice qué venderle
+después, porque ahí salen las preguntas que su negocio todavía no sabe
+responder.
+
+### Qué NO incluye
+
+Cobros, agendar citas, campañas de marketing, control de inventario. Son la v2
+y se cobran aparte. Decirlo desde el principio evita la conversación incómoda
+del mes tres.
+
+### La regla que protege el negocio
+
+Al no cobrar instalación, **las horas de montaje las pagas tú**. Si un cliente
+se va en el mes dos, ese montaje se pagó con US$100. La única defensa es que el
+montaje sea barato en tiempo:
+
+- **Tope duro: 2 horas de montaje por cliente.** Intake fijo (que mande su
+  lista de precios como esté: foto, Excel, o escrita en un mensaje), nada a la
+  medida en la v1.
+- **Si un cliente necesita más de 2 horas, no es cliente de este producto.**
+  Es cliente de "Sistema a medida", y se cotiza aparte.
+
+Sin ese tope, el producto no cierra: US$50 al mes no paga una semana de trabajo
+de montaje, por mucho que el cliente se quede un año.
 
 ---
 
@@ -588,7 +648,7 @@ los paquetes de Sistema a la medida cuando su negocio lo pida.
 | **Arranque** | US$450 | Presencia web + WhatsApp conectado + catálogo básico | El que no tiene nada |
 | **Automatización puntual** | US$350 | Un proceso repetitivo resuelto de punta a punta | El que pierde horas en algo concreto |
 | **Sistema a medida** | US$1,200 | Punto de venta, agenda, inventario u órdenes, modelado a su operación | El que ya le queda chico lo que tiene |
-| **Sistema en marcha** | US$?/mes | WhatsApp que responde solo + confirmación de citas. Ver sección 6 | El cliente que ya recibió un sitio gratis y preguntó "¿y ahora qué?" |
+| **Sistema en marcha** | US$50/mes | WhatsApp que responde solo, escalado a persona y resumen semanal. Mes por adelantado, sin contrato. Ver sección 6.1 | El cliente que ya recibió un sitio gratis y preguntó "¿y ahora qué?" |
 | **Acompañamiento** | US$60/mes | Soporte, ajustes y mejoras continuas | Opcional, nunca obligatorio |
 
 **Reglas de precio:**
@@ -605,8 +665,12 @@ los paquetes de Sistema a la medida cuando su negocio lo pida.
 - [ ] Definir si se atiende EEUU con precios distintos y cómo se comunica.
 - [ ] Fase 2: retomar facturación electrónica cuando haya clientes y una
       forma definida de cobrar la operación recurrente.
-- [ ] Fijar el precio y el alcance real de "Sistema en marcha" (sección 6) y
-      construir el generador rápido de sitios que reemplaza a GoHighLevel.
+- [x] Fijar el precio y el alcance real de "Sistema en marcha" → sección 6.1.
+- [ ] Construir el asistente de WhatsApp de la v1 (es el producto que cobra).
+- [ ] Rehacer el sitio base de regalo: uno solo, bien trabajado. `sitio-express`
+      queda en pausa hasta entonces.
+- [ ] Validar el tope de 2 horas de montaje con los primeros clientes reales.
+      Si en la práctica son 5, el precio o el alcance están mal.
 
 ---
 
@@ -616,6 +680,8 @@ los paquetes de Sistema a la medida cuando su negocio lo pida.
 - [CAF — Policy Paper #12: Digitalización de las PyMEs en América Latina](https://scioteca.caf.com/bitstream/handle/123456789/1970/Policy%20Paper%20%2312%20-%20Digitalizaci%C3%B3n%20de%20las%20PyMEs%20en%20Am%C3%A9rica%20Latina.pdf?sequence=3&isAllowed=y)
 - [BID — Prioridades para la digitalización empresarial en América Latina y el Caribe](https://publications.iadb.org/es/prioridades-para-la-digitalizacion-empresarial-en-america-latina-y-el-caribe)
 - [Blip — Estadísticas de WhatsApp Business en LATAM 2026](https://www.blip.ai/blog/es/whatsapp/estadisticas-whatsapp-marketing-latam/)
+- [SleekFlow — WhatsApp Business API Pricing: las conversaciones de servicio son gratis desde el 1/11/2024](https://help.sleekflow.io/en_US/whatsapp/pricing)
+- [Blueticks — WhatsApp Business per-message pricing 2026: qué cambió](https://blueticks.co/blog/whatsapp-business-pricing-change-2026-per-message)
 - [Alegra — Facturación electrónica obligatoria en RD: fechas límite DGII 2026](https://blog.alegra.com/republica-dominicana/obligatoriedad-de-factura-electronica/)
 - [Galileo Contabilidad — Facturación electrónica obligatoria 2026 para MIPYMES dominicanas](https://galileocontabilidad.com/blog/posts/novedades-dgii-2026/)
 - [Treinta — Control de inventario de repuestos en tu taller mecánico](https://treinta.co/blog/control-inventario-repuestos)

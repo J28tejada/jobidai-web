@@ -5,6 +5,11 @@ description: Genera el sitio de una página que se regala a un negocio local (la
 
 # Sitio express
 
+> **EN PAUSA (septiembre 2026).** Se sigue regalando el sitio de prueba, pero
+> no así: la decisión es hacer **uno solo, bien trabajado**, al nivel del sitio
+> de Jobid, y personalizar ese para cada cliente. Lo que hay aquí abajo genera
+> sitios demasiado genéricos. No lo uses hasta rehacer la base.
+
 Arma en minutos el sitio de una página que se **regala** a un negocio local, se
 entrega como vista previa temporal y se despublica a los 7 días si no hay
 respuesta. Es la pieza que en el video original hacía "AI Studio" de

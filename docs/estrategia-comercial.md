@@ -443,7 +443,141 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 
 ---
 
-## 6. Estructura de oferta y precios
+## 6. La oferta gancho: sitio gratis + sistema en marcha
+
+> Añadido en septiembre 2026, a partir de un video sobre agencias con
+> GoHighLevel. La mecánica de fondo es excelente y traducible; lo que cambia
+> es la herramienta: donde el video usa GoHighLevel, nosotros usamos un
+> generador propio hecho con Claude Code, y el "sistema detrás del sitio" no
+> es una automatización enlatada de una plataforma, es exactamente lo que ya
+> estamos construyendo en el laboratorio (el analizador + motor determinista +
+> escalado a persona).
+
+### La idea central, en una frase
+
+**No le vendas el sitio. Regálaselo. Cóbrale por lo que lo mantiene vivo.**
+
+Pedirle a un extraño que confíe en ti *antes* de haber hecho algo por él es
+pedir demasiado, demasiado pronto. Por eso los mensajes de venta fríos no
+funcionan: le estás pidiendo tiempo y dinero a alguien que no te conoce. La
+solución es invertir el orden: construyes primero, entregas gratis, y dejas
+que sea el propio dueño el que pregunte "¿y ahora qué?". Esa pregunta es la
+que abre la puerta a la venta — nunca la abres tú primero.
+
+### Por qué esto no contradice "0 mensualidades obligatorias"
+
+No es una mensualidad por el software. Es una mensualidad por un **servicio
+que sigue operando**: el número de WhatsApp que contesta solo, el sistema
+que pide reseñas, el que agenda citas. Eso consume infraestructura de verdad
+(hosting, conexión a WhatsApp, monitoreo) todos los meses, así que es honesto
+cobrarlo aparte. La distinción que hay que sostener siempre en el copy:
+
+- **El sitio es tuyo. Sin mensualidad, sin candado.** Se cumple.
+- **El sistema que lo mantiene funcionando es un servicio aparte, opcional,
+  y se cancela cuando quieras.** También se cumple, porque nunca decimos que
+  sea gratis ni obligatorio.
+
+### Cómo se traduce cada pieza de GoHighLevel
+
+| En el video (GoHighLevel) | En Jobid (Claude Code) |
+| --- | --- |
+| Grupos locales de Facebook | Igual — en RD y LatAm son, si acaso, más centrales que en EE. UU. (grupos de compra-venta, de empresarios del barrio, de la comunidad) |
+| AI Studio: un prompt arma el sitio en 3–5 min | Una herramienta propia: a partir del nombre del negocio, el rubro (uno de los 9 que ya tenemos mapeados) y la ciudad, se genera un sitio de una página con nuestro propio sistema de diseño, listo en minutos |
+| Enlace de vista previa temporal, bajo control del que lo construye | Un subdominio o ruta de vista previa propia (por ejemplo `previa.jobid.ai/nombre-negocio`), que se puede despublicar de verdad a los 7 días |
+| El "sistema" detrás: texto automático a leads, solicitud de reseñas, chat que responde y agenda — todo nativo de la plataforma | Aquí es donde de verdad reemplazamos GoHighLevel por trabajo propio: el asistente de WhatsApp que ya íbamos a construir como demo del laboratorio, más recordatorios de reseña y de citas. No es una automatización de plataforma, es software nuestro |
+| Cuentas de cliente ilimitadas bajo una sola suscripción → el costo marginal por cliente nuevo es casi cero | Nosotros no tenemos ese atajo: cada cliente activo consume WhatsApp y hosting de verdad. El precio mensual tiene que cubrir ese costo real, no asumir margen de plataforma ajena |
+| Herramienta que busca negocios sin sitio web en Google Maps | Un script sencillo, muy replicable: buscar por rubro y ciudad, filtrar los que no tienen sitio en su ficha |
+| Dominio siempre a nombre del cliente, nunca de la agencia | Ya es un principio de Jobid. Se mantiene igual |
+
+### Los mensajes (listos para usar, tono LatAm)
+
+**1. El post en el grupo local**
+
+> Estoy armando 2 sitios web gratis esta semana para [tipo de negocio] en
+> [ciudad]. Quiero tener un par de ejemplos reales y de paso me sirve tu
+> opinión sincera. Si te gusta lo que te muestro, te quedas con él.
+> Comenta o escríbeme por WhatsApp si te interesa.
+
+Cambia el tipo de negocio según el rubro que quieras trabajar esa semana.
+Empieza por el que más cómodo te sientas explicando.
+
+**2. Cuando alguien responde**
+
+> ¡Qué bien! Cuéntame dos cositas: ¿cómo se llama tu negocio, y ya tienes
+> alguna página, aunque sea vieja?
+
+Nada más. No se pitchea nada todavía. El resto (servicios, teléfono, horario)
+casi siempre está público en su ficha de Google.
+
+**3. Mensaje de entrega**
+
+> Hola [nombre], ya te tengo el sitio listo. Aquí está la vista previa:
+> [enlace]. Es temporal, la voy a quitar en 7 días. Échale un ojo cuando
+> puedas. Si te gusta y quieres quedarte con él, me avisas y te cuento los
+> siguientes pasos.
+
+Sin precio, sin paquetes, sin "por cierto, también ofrezco...". El plazo de
+7 días tiene que ser real: se publica y se despublica de verdad.
+
+**4. El cierre (cuando preguntan "¿y ahora qué?")**
+
+> Qué bueno que te gustó. El sitio es gratis: si lo quieres, hago los ajustes
+> que necesites y lo paso a tu dominio. Lo que sí tiene costo es lo que lo
+> mantiene funcionando: que los mensajes nuevos se contesten solos por
+> WhatsApp, que a tus clientes se les pida la reseña en Google sin que tengas
+> que acordarte, y que el sitio pueda responder preguntas y agendar citas.
+> Eso son US$[x] al mes, sin contrato, cancelas cuando quieras. Si quieres
+> seguir, te mando el link de pago y esta semana lo dejamos conectado.
+
+Esta pregunta la hace el cliente, nunca tú. Si no la hace, no se fuerza: se
+espera, o se despublica el sitio a los 7 días sin más.
+
+**5. Mensaje frío, para negocios sin web (sin depender del grupo de Facebook)**
+
+> Hola [nombre], estaba buscando la página de [negocio] en [ciudad] y no
+> encontré ninguna. Sé que esto suena de la nada, pero fui y te armé una de
+> todas formas. ¿Te la mando para que le eches un vistazo?
+
+Es un regalo, no una oferta. La diferencia entre "¿quieres que te construya
+un sitio?" (que se ignora, porque lo manda un extraño pidiendo algo) y "ya te
+construí uno" (que se abre, porque es un regalo) es enorme.
+
+### Tres cosas que lo pueden arruinar
+
+1. **No te obsesiones con el sitio gratis.** El punto es que la IA te permite
+   entregar algo genuinamente bueno rápido. Si le metes tres horas afinando
+   detalles a alguien que todavía no te ha pagado nada, el número no cuadra.
+2. **Revisa lo que el sistema inventó antes de enviarlo.** Teléfono, horario,
+   dirección, "desde 1998" cuando el negocio abrió el año pasado. Enseñarle
+   a un cliente un sitio precioso con un dato inventado destruye la confianza
+   de un solo golpe.
+3. **No conectes el dominio ni actives nada hasta que digan que sí y paguen.**
+   La vista previa existe justo para que decidan sin que tú hayas hecho
+   trabajo sin cobrar de más.
+
+### Cómo escala
+
+Un cliente a US$[x]/mes es el punto de partida, no el techo. Diez clientes en
+el sistema es un ingreso recurrente real corriendo solo. Y cada cliente que
+ya confía en ti para su presencia digital es candidato natural para subir a
+los paquetes de Sistema a la medida cuando su negocio lo pida.
+
+### Lo que falta decidir antes de correr esto
+
+- **Precio mensual real del "sistema en marcha".** El video usa US$297,
+  precio de mercado estadounidense. Para el micro negocio de RD/LatAm hay que
+  encontrar el número que de verdad se pueda pagar y que a la vez cubra el
+  costo de WhatsApp y hosting por cliente. Se valida con los primeros clientes
+  reales, igual que el resto de los precios.
+- **Qué incluye la v1 del "sistema".** El candidato natural: respuesta
+  automática por WhatsApp (foco 1 de la fase 1) + confirmación de citas
+  (foco 4). Reseñas de Google se puede sumar después.
+- **Canal y rubro del piloto.** Grupos de Facebook o de WhatsApp de Santo
+  Domingo, con el rubro que más cómodo resulte para empezar.
+
+---
+
+## 7. Estructura de oferta y precios
 
 > Rangos de partida en US$ para validar. El micro negocio latinoamericano tiene
 > el margen apretado: un precio de agencia europea no cierra ninguna venta.
@@ -454,6 +588,7 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 | **Arranque** | US$450 | Presencia web + WhatsApp conectado + catálogo básico | El que no tiene nada |
 | **Automatización puntual** | US$350 | Un proceso repetitivo resuelto de punta a punta | El que pierde horas en algo concreto |
 | **Sistema a medida** | US$1,200 | Punto de venta, agenda, inventario u órdenes, modelado a su operación | El que ya le queda chico lo que tiene |
+| **Sistema en marcha** | US$?/mes | WhatsApp que responde solo + confirmación de citas. Ver sección 6 | El cliente que ya recibió un sitio gratis y preguntó "¿y ahora qué?" |
 | **Acompañamiento** | US$60/mes | Soporte, ajustes y mejoras continuas | Opcional, nunca obligatorio |
 
 **Reglas de precio:**
@@ -464,12 +599,14 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 
 ---
 
-## 7. Pendientes
+## 8. Pendientes
 
 - [ ] Validar los precios con dos o tres clientes reales antes de publicarlos.
 - [ ] Definir si se atiende EEUU con precios distintos y cómo se comunica.
 - [ ] Fase 2: retomar facturación electrónica cuando haya clientes y una
       forma definida de cobrar la operación recurrente.
+- [ ] Fijar el precio y el alcance real de "Sistema en marcha" (sección 6) y
+      construir el generador rápido de sitios que reemplaza a GoHighLevel.
 
 ---
 

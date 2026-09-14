@@ -1,0 +1,5 @@
+# Generados por generar.py: se rehacen con `python3 generar.py`.
+*.dc.html
+canvas.json
+# Canvas ya ensamblado (~2 MB de editor incrustado).
+mensaje-de-las-11.html

@@ -1,12 +1,18 @@
 ---
 name: contenido
-description: Convierte un gancho del banco de docs/estrategia-comercial.md §5 en contenido de captación listo para publicar — reel (texto en pantalla, guion hablado, plan de grabación y caption) o post para grupos locales. Úsala cuando haya que producir contenido para atraer clientes, preferiblemente en tandas de varias piezas.
+description: Elige el gancho y escribe el copy de captación a partir de docs/estrategia-comercial.md §5 — qué decir, el CTA, el caption y el texto de posts para grupos locales de Facebook y WhatsApp. Para el diseño de carruseles e imágenes usa la skill carrusel; para guiones de reel, la sección de video (hoy en pausa). Trabaja en tandas.
 ---
 
 # Contenido de captación
 
-Produce el contenido que trae leads: reels para Instagram y TikTok, y posts
-para grupos locales de Facebook y WhatsApp.
+> **El video está en pausa (septiembre 2026).** El formato principal ahora son
+> carruseles y posts de imagen: usa la skill `carrusel`. Lo de aquí abajo que
+> sigue vigente es el banco de ganchos, la regla de no inventar números, el CTA
+> y la disciplina de producir en tandas. Los guiones de reel y los planes de
+> grabación quedan para cuando se retome el video.
+
+Produce el contenido que trae leads: carruseles para Instagram y LinkedIn,
+posts para grupos locales de Facebook y WhatsApp, y —cuando se retome— reels.
 
 La materia prima ya existe y **no se inventa aquí**:
 

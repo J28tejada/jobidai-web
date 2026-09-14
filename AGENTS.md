@@ -51,4 +51,29 @@ final**, nunca `opacity: 0`.
 3. Revisión visual real en el navegador, no solo compilación correcta
 4. axe-core sobre `/es` y `/en` con `prefers-reduced-motion: reduce`
 
+## Dónde está cada cosa
+
+- `docs/estrategia-comercial.md` — **fuente de verdad comercial.** Posicionamiento,
+  dolores con sus datos y fuentes (§2), sectores (§3), banco de ganchos (§5),
+  la oferta de pago con su alcance y precio (§6.1) y la tabla de precios (§7).
+  Si cambias posicionamiento, alcance u oferta, cámbialo ahí **primero** y
+  después baja los cambios al sitio y al contenido.
+- `src/` — el sitio. `src/lib/laboratorio/` — las demos funcionales.
+- `marketing/carruseles/` — contenido de captación. Solo se versiona
+  `generar.py`; las diapositivas se regeneran.
+- `.claude/skills/` — los métodos, para que no dependan de una conversación:
+  `carrusel` (imágenes de captación), `contenido` (ganchos, copy y CTA),
+  `sitio-express` (en pausa hasta rehacer el sitio base).
+
+## Ningún dato inventado
+
+Aplica al sitio, al contenido y a cualquier cosa que vea un cliente. **Solo se
+citan cifras que estén en `docs/estrategia-comercial.md` §2 o §3**, que tienen
+su fuente al final del documento. Y no se atribuye una fuente que el documento
+no fije: el "hasta 8 veces más" está en §2.1, pero de dónde sale no, así que se
+usa sin atribución hasta que se fije.
+
+Tampoco se enseña funcionando un producto que todavía no existe. Describirlo
+para venderlo es legítimo; simular una captura de pantalla no.
+
 <!-- END:jobid-project-rules -->

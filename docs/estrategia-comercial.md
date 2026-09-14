@@ -441,6 +441,47 @@ Organizados por tipo. Cada uno es un reel de 30–60 segundos.
 3. **20–45 s:** la solución mostrada, no explicada. Pantalla grabada.
 4. **45–60 s:** cierre con una acción: "escríbeme y te digo si tiene arreglo".
 
+### El CTA de todo el contenido: el diagnóstico gratis
+
+Decisión de septiembre 2026. El gancho gratis **ya no es un sitio regalado**:
+es la opinión honesta que el sitio ya promete en la sección de contacto —
+*"te digo si tiene arreglo, cómo lo haría y qué rango de precio esperar"*.
+
+Tiene tres ventajas sobre regalar un sitio: no hay que construir nada antes de
+que alguien lo pida, no compite con el servicio premium de webs a la medida, y
+lo que el prospecto recibe (una respuesta que entendió *su* operación) es la
+única demostración real de "100% adaptado a tu negocio" que va a ver antes de
+pagar.
+
+**El contenido manda a WhatsApp, no al formulario.** En América Latina el
+formulario web convierte muy por debajo. El formulario del sitio queda para
+quien llega a la web por su cuenta.
+
+El enlace lleva mensaje precargado y el tema de la pieza dentro:
+
+```
+https://wa.me/{{TU_WHATSAPP}}?text=Vi%20tu%20video%20sobre%20{{TEMA}}%20y%20quiero%20preguntarte%20algo
+```
+
+Cuando entra el mensaje ya sabes qué pieza lo trajo, sin preguntar. Es la única
+medición que vas a tener al principio, y es gratis.
+
+### Cómo se produce
+
+Con la skill `contenido` (`.claude/skills/contenido/`), **en tandas de 4 a 6
+piezas**, no de una en una. Nadie deja de publicar por falta de ideas: se deja
+de publicar porque cada pieza empieza en blanco y a la tercera semana se
+abandona. Se generan seis, se graban el mismo día y se publican dos por semana
+durante tres semanas.
+
+Rotación de una tanda: 3 de dolor, 2 de demostración, 1 educativo. Los de
+contraste se guardan para cuando ya haya audiencia que te conozca — discuten
+con una alternativa, y para eso tienen que saber quién eres.
+
+**Lo que mide el éxito no son vistas: son mensajes de WhatsApp.** Un reel de
+400 vistas que trae dos conversaciones vale más que uno de 20,000 que no trae
+ninguna.
+
 ---
 
 ## 6. La oferta gancho: sitio gratis + sistema en marcha
@@ -667,6 +708,10 @@ de montaje, por mucho que el cliente se quede un año.
       forma definida de cobrar la operación recurrente.
 - [x] Fijar el precio y el alcance real de "Sistema en marcha" → sección 6.1.
 - [ ] Construir el asistente de WhatsApp de la v1 (es el producto que cobra).
+- [ ] Conectar el formulario de contacto: hoy devuelve 503 porque faltan
+      `RESEND_API_KEY`, `CONTACT_TO_EMAIL` y `CONTACT_FROM_EMAIL`.
+- [ ] Estructurar el diagnóstico: es lo que convierte el lead en cliente y es
+      lo que el sitio ya promete responder en 24 horas.
 - [ ] Rehacer el sitio base de regalo: uno solo, bien trabajado. `sitio-express`
       queda en pausa hasta entonces.
 - [ ] Validar el tope de 2 horas de montaje con los primeros clientes reales.
